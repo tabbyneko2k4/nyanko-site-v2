@@ -1,0 +1,30 @@
+{
+"name": "Tabby Neko | Music & Code", 
+"short_name": "Tabby Neko",       
+"description": "Official portfolio of Tabby Neko, music producer and programmer.", 
+"start_url": "/",                
+"display": "standalone",           
+"background_color": "#111827",    
+"theme_color": "#1f77bc",           
+"orientation": "portrait-primary", 
+"scope": "/",                       
+"icons": [
+    {
+    "src": "/favicon.png", 
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any" 
+    },
+    {
+    "src": "/favicon.png", 
+    "sizes": "512x512",
+    "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots" : [ 
+
+],
+"shortcuts": [
+]
+}

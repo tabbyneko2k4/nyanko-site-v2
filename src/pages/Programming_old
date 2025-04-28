@@ -1,0 +1,66 @@
+
+import { useEffect } from "react";
+
+// Define the programming projects data
+const programmingProjects = [
+  {
+    title: "Portfolio Website",
+    description: "A responsive portfolio website built with React and TailwindCSS.",
+    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    title: "Music Visualizer",
+    description: "An interactive music visualizer application that responds to audio frequencies.",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    title: "Game Development",
+    description: "A 2D platformer game developed using Unity and C#.",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+  }
+];
+
+const Programming = () => {
+  useEffect(() => {
+    document.title = "Programming | Tabby Neko";
+  }, []);
+
+  return (
+    <div className="min-h-screen pt-20 pb-12 animate-page-enter">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl md:text-5xl font-gaming mb-8 text-center animate-content-enter">My <span className="text-primary">Programming</span></h1>
+        <p className="text-lg text-center mb-12 max-w-2xl mx-auto animate-content-enter [animation-delay:200ms]">
+          Discover my projects, applications, and technical skills. This section showcases my work as a programmer.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {programmingProjects.map((project, index) => (
+            <div 
+              key={index} 
+              className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:translate-y-[-5px] duration-300 animate-content-enter"
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
+            >
+              <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-gaming mb-2">{project.title}</h3>
+              <p className="text-muted-foreground">{project.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center animate-content-enter [animation-delay:600ms]">
+          <p className="text-lg font-medium">
+            This page is under construction. Check back soon for more programming content!
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Programming;

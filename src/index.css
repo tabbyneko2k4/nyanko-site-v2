@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 196 80% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Màu hồng nhạt cho light mode */
+    --secondary: 350 100% 94%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 262 68% 74%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 80% 53%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    /* ---- THAY ĐỔI Ở ĐÂY ---- */
+    /* Màu hồng đậm hơn cho dark mode */
+    --secondary: 350 90% 65%; /* Ví dụ: Giảm Saturation và Lightness */
+    /* Giữ nguyên secondary-foreground (màu chữ trên nền secondary) nếu phù hợp */
+    /* Nếu màu hồng mới quá tối, bạn có thể cần đổi foreground sang màu sáng hơn */
+    --secondary-foreground: 210 40% 98%; /* Giữ nguyên màu trắng để tương phản tốt */
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 262 68% 74%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Phần còn lại giữ nguyên */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-gaming tracking-wider;
+  }
+}
+
+@layer components {
+  .hover-scale {
+    @apply transform transition-transform duration-300 hover:scale-105;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 5px rgba(51, 195, 240, 0.7);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 5px rgba(255, 222, 226, 0.8);
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 dark:bg-black/20 dark:border-white/10;
+  }
+  /* CSS cho Hero Background nếu có */
+  .hero-background {
+    /* Ảnh mặc định cho mobile */
+    background-image: url('/hero-image-mobile.png');
+  }
+  @media (min-width: 768px) {
+    .hero-background {
+      background-image: url('/hero-image.jpg');
+    }
+  }
+}
