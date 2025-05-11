@@ -1,3 +1,6 @@
+## TODO:
+- Need thumbnails for video.
+
 ## How to use this project?
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
