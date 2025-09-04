@@ -11,9 +11,11 @@ import Footer from "@/components/Footer";
 import Index from "@/pages/Index";
 import Music from "@/pages/Music";
 import Programming from "@/pages/Programming";
-import Commission from "@/pages/Commission";
+import CodeCommission from "@/pages/CodeCommission";
+import MusicCommission from "@/pages/MusicCommission";
 import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
+import CommissionLandingPage from './pages/CommissionLandingPage';
 
 const queryClient = new QueryClient();
 
@@ -31,7 +33,9 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/program" element={<Programming />} />
-                <Route path="/commission" element={<Commission />} />
+                <Route path="/music-commission" element={<MusicCommission />} />
+                <Route path="/code-commission" element={<CodeCommission />} />
+                <Route path="/commission" element={<CommissionLandingPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
