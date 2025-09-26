@@ -7,8 +7,11 @@ import { ArrowUp } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton'; // Chỉnh lại đường dẫn nếu cần
 // Import content
 import { codeCommissionContent } from "./codeCommissionContent"; // THAY ĐỔI IMPORT
+// Import custom hook
+import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 
 // --- Dữ liệu Samples cho Code ---
 // THAY THẾ bằng đường dẫn đến ảnh của bạn
@@ -22,7 +25,7 @@ const sampleImages = [
 ];
 
 const CodeCommission = () => { // ĐỔI TÊN COMPONENT
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useAutoLanguage();
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const content = codeCommissionContent[language]; // THAY ĐỔI CONTENT OBJECT
 
@@ -203,7 +206,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
       {/* Cụm nút sticky */}
       <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
         {isScrollTopVisible && (<Button variant="outline" size="icon" onClick={handleScrollToTop} aria-label="Scroll to top" className="bg-background/80 backdrop-blur-sm hover:bg-primary/20 h-11 w-11 rounded-full animate-in fade-in"><ArrowUp className="h-5 w-5" /></Button>)}
-        <Button variant="outline" size="icon" onClick={() => setLanguage(language === 'en' ? 'vi' : 'en')} aria-label="Switch Language" className="bg-background/80 backdrop-blur-sm hover:bg-primary/20 h-11 w-11 rounded-full font-bold text-lg">{language.toUpperCase()}<span className="sr-only">{content.buttons.switchLang}</span></Button>
+        <LanguageSwitcherButton language={language} setLanguage={setLanguage} />
       </div>
     </>
   );

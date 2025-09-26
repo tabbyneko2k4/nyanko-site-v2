@@ -1,28 +1,52 @@
-// commissionLandingContent.js
-
-// Import icons để dễ dàng tham chiếu trong component
-import { Music, Code2 } from 'lucide-react';
+// commissionLandingContent.ts
+import { Brush, Code } from 'lucide-react';
 
 export const commissionLandingContent = {
-  pageTitle: {
-    main: "CHOOSE YOUR",
-    highlight: "COMMISSION"
-  },
-  intro: "I offer specialized commission services to bring your creative projects to life. Please select the category you're interested in below to view details and pricing.",
-  cards: [
-    {
-      title: { main: "MUSIC", highlight: "COMMISSIONS" },
-      description: "Custom background music, arrangements, and unique soundscapes for your streams, games, or videos.",
-      linkTo: "/music-commission",
-      ctaText: "View Music Options",
-      Icon: Music, // Truyền component icon vào
-    },
-    {
-      title: { main: "CODE", highlight: "COMMISSIONS" },
-      description: "Bespoke stream widgets, event overlays, and interactive elements designed to match your brand and engage your audience.",
-      linkTo: "/code-commission",
-      ctaText: "View Code Options",
-      Icon: Code2, // Truyền component icon vào
+  en: {
+    pageTitle: { main: "My", highlight: "Commissions" },
+    intro: "Welcome! Choose a category below to see more details and pricing information for my services.",
+    cards: [
+      {
+        Icon: Code,
+        title: { main: "Code & Widget", highlight: "Commissions" },
+        description: "Custom chat widgets, event overlays, and interactive elements for your stream or website.",
+        ctaText: "View Details",
+        linkTo: "/commissions/code",
+      },
+      {
+        Icon: Brush,
+        title: { main: "Music & SFX", highlight: "Commissions" },
+        description: "Original background music, sound effects, and custom tracks tailored for your content.",
+        ctaText: "View Details",
+        linkTo: "/commissions/music",
+      },
+    ],
+    // --- BỔ SUNG Ở ĐÂY ---
+    buttons: {
+        switchLang: "Chuyển sang Tiếng Việt"
     }
-  ]
+  },
+  vi: {
+    pageTitle: { main: "Trang", highlight: "Commission" },
+    intro: "Chào mừng! Vui lòng chọn một danh mục bên dưới để xem thêm chi tiết và thông tin giá cả cho các dịch vụ của tôi.",
+    cards: [
+      {
+        Icon: Code,
+        title: { main: "Commission", highlight: "Code & Widget" },
+        description: "Widget chat, overlay sự kiện, và các yếu tố tương tác tùy chỉnh cho stream hoặc trang web của bạn.",
+        ctaText: "Xem Chi Tiết",
+        linkTo: "/commissions/code",
+      },
+      {
+        Icon: Brush,
+        title: { main: "Commission", highlight: "Nhạc & SFX" },
+        description: "Nhạc nền gốc, hiệu ứng âm thanh, và các bản nhạc được tùy chỉnh riêng cho nội dung của bạn.",
+        ctaText: "Xem Chi Tiết",
+        linkTo: "/commissions/music",
+      },
+    ],
+    buttons: {
+        switchLang: "Switch to English"
+    }
+  }
 };
