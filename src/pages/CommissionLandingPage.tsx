@@ -4,29 +4,19 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton'; // Import component nút cờ
-import { commissionLandingContent } from './commissionLandingContent';
-
-// BƯỚC 1: LOG DỮ LIỆU IMPORT
-console.log("1. Dữ liệu import (commissionLandingContent):", commissionLandingContent);
+import { commissionLandingContent as contentData } from './commissionLandingContent';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CommissionLandingPage = () => {
-  const [language, setLanguage] = useAutoLanguage();
+  const { language } = useLanguage();
+  const content = contentData[language];
   
-  // BƯỚC 2: LOG STATE NGÔN NGỮ
-  console.log("2. State ngôn ngữ từ hook (language):", language);
-
-  const content = commissionLandingContent[language];
-
-  // BƯỚC 3: LOG BIẾN CONTENT SAU KHI XỬ LÝ
-  console.log("3. Biến content cuối cùng:", content);
 
   useEffect(() => {
     document.title = `Commissions | Tabby Neko`;
   }, []);
 
   if (!content) {
-    // Nếu trang trắng, dòng log này sẽ hiện ra
-    console.log("4. Component không render vì 'content' là falsy (undefined, null, ...)");
     return null; 
   }
 
@@ -78,11 +68,6 @@ const CommissionLandingPage = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Nút chuyển đổi ngôn ngữ */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <LanguageSwitcherButton language={language} setLanguage={setLanguage} />
       </div>
     </>
   );

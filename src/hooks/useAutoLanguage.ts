@@ -10,6 +10,8 @@ export const useAutoLanguage = (): [SupportedLanguage, (lang: SupportedLanguage)
 
   useEffect(() => {
     const browserLang = navigator.language.toLowerCase();
+
+    console.log('Detected browser language:', browserLang);
     if (browserLang.startsWith('vi')) {
       setLanguage('vi');
     } else {

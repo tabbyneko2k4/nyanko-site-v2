@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ... các phần khác của file ... */
+
+@layer base {
+  :root {
+    /* ... các màu khác ... */
+    
+    --accent: 210 40% 96.1%; /* Màu xám rất nhạt cho nền hover (light mode) */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Màu chữ trên nền accent (light mode) */
+    
+    /* ... các màu khác ... */
+  }
+
+  .dark {
+    /* ... các màu khác ... */
+
+    --accent: 217.2 32.6% 17.5%; /* Màu xám đậm cho nền hover (dark mode) */
+    --accent-foreground: 210 40% 98%; /* Màu chữ trên nền accent (dark mode) */
+    
+    /* ... các màu khác ... */
+  }
+}
+
+/* ... các phần khác của file ... */

@@ -12,6 +12,7 @@ import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton'; // 
 import { codeCommissionContent } from "./codeCommissionContent"; // THAY ĐỔI IMPORT
 // Import custom hook
 import { useAutoLanguage } from '@/hooks/useAutoLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // --- Dữ liệu Samples cho Code ---
 // THAY THẾ bằng đường dẫn đến ảnh của bạn
@@ -25,7 +26,7 @@ const sampleImages = [
 ];
 
 const CodeCommission = () => { // ĐỔI TÊN COMPONENT
-  const [language, setLanguage] = useAutoLanguage();
+  const { language } = useLanguage();
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const content = codeCommissionContent[language]; // THAY ĐỔI CONTENT OBJECT
 
@@ -120,7 +121,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
             <p className="text-center text-muted-foreground mt-8">{content.pricing.note}</p>
           </div>
 
-          {/* --- Samples Section (Image Gallery) --- */}
+          {/* --- Samples Section (Image Gallery) ---
           <div className="mb-20 animate-content-enter [animation-delay:600ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.samples}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -141,7 +142,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
                 </Dialog>
               ))}
             </div>
-          </div>
+          </div> */}
           
           {/* --- Workflow Section --- */}
           <div className="mb-20 animate-content-enter [animation-delay:800ms]">
@@ -206,7 +207,6 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
       {/* Cụm nút sticky */}
       <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
         {isScrollTopVisible && (<Button variant="outline" size="icon" onClick={handleScrollToTop} aria-label="Scroll to top" className="bg-background/80 backdrop-blur-sm hover:bg-primary/20 h-11 w-11 rounded-full animate-in fade-in"><ArrowUp className="h-5 w-5" /></Button>)}
-        <LanguageSwitcherButton language={language} setLanguage={setLanguage} />
       </div>
     </>
   );

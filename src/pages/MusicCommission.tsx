@@ -32,6 +32,7 @@ import LanguageSwitcherButton from "@/components/ui/LanguageSwitcherButton";
 import { commissionContent } from "./musicCommissionContent";
 // Import custom hook
 import { useAutoLanguage } from "@/hooks/useAutoLanguage";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // --- Dữ liệu Video Samples & SoundCloud (giữ nguyên) ---
 const youtubeSampleVideos = [
@@ -48,7 +49,7 @@ const soundcloudSetUrl =
 const soundcloudSetTitle = "Sample cho khách | Sample for customers";
 
 const MusicCommission = () => {
-  const [language, setLanguage] = useAutoLanguage();
+  const { language } = useLanguage();
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const content = commissionContent[language];
 
@@ -403,7 +404,6 @@ const MusicCommission = () => {
             <ArrowUp className="h-5 w-5" />
           </Button>
         )}
-        <LanguageSwitcherButton language={language} setLanguage={setLanguage} />
       </div>
     </>
   );

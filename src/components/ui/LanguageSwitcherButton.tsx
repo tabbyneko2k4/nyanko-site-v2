@@ -4,7 +4,6 @@ import React from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { Button } from '@/components/ui/button';
 
-// Định nghĩa các props mà component sẽ nhận
 interface LanguageSwitcherButtonProps {
   language: 'en' | 'vi';
   setLanguage: (lang: 'en' | 'vi') => void;
@@ -18,38 +17,24 @@ const LanguageSwitcherButton: React.FC<LanguageSwitcherButtonProps> = ({ languag
 
   return (
     <Button
-      variant="outline"
+      variant="ghost" 
       size="icon"
       onClick={toggleLanguage}
       aria-label="Switch Language"
-      className="bg-background/80 backdrop-blur-sm hover:bg-primary/20 h-11 w-11 rounded-full flex items-center justify-center overflow-hidden"
+      // THÊM CLASS NÀY ĐỂ ĐẢM BẢO NÚT LUÔN TRÒN
+      className="rounded-full hover:bg-primary/20"
     >
-      {/* 
-        Hiển thị cờ của ngôn ngữ hiện tại.
-        Khi đang là 'vi', hiển thị cờ Việt Nam.
-        Khi đang là 'en', hiển thị cờ Mỹ.
-      */}
-      {language === 'vi' ? (
-        <ReactCountryFlag
-          countryCode="VN"
-          svg
-          style={{
-            width: '2em',
-            height: '2em',
-          }}
-          title="Tiếng Việt"
-        />
-      ) : (
-        <ReactCountryFlag
-          countryCode="US" // Bạn cũng có thể dùng "GB" cho cờ Anh
-          svg
-          style={{
-            width: '2em',
-            height: '2em',
-          }}
-          title="English"
-        />
-      )}
+      <ReactCountryFlag
+        countryCode={language === 'vi' ? 'VN' : 'US'}
+        svg
+        style={{
+          width: '1.5rem', // 24px
+          height: '1.5rem', // 24px
+          borderRadius: '50%',
+          objectFit: 'cover',
+        }}
+        title={language === 'vi' ? 'Tiếng Việt' : 'English'}
+      />
     </Button>
   );
 };

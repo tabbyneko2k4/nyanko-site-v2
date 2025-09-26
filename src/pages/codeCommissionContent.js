@@ -19,14 +19,14 @@ export const codeCommissionContent = {
       tiers: [
         {
           name: "Chat Widget",
-          usd: "USD 20",
-          vnd: "VND 300.000",
+          vnd: "USD 20",
+          usd: "VND 300.000",
           features: ["Custom chat widget design", "Styled to match your brand"],
         },
         {
           name: "Chat + Event Widget",
-          usd: "USD 35",
-          vnd: "VND 450.000",
+          vnd: "USD 35",
+          usd: "VND 450.000",
           features: [
             "Includes everything in the Chat Widget package",
             "Custom event overlay (e.g., new follower, subscriber, donation)",
@@ -165,26 +165,25 @@ export const codeCommissionContent = {
     ],
   },
   vi: {
-    // --- PHIÊN BẢN TIẾNG VIỆT ---
-    pageTitle: { main: "NHẬN ĐẶT", highlight: "CHAT CODE" },
+    pageTitle: { main: "NHẬN ĐẶT", highlight: "CODE" },
     intro:
       "Bạn cần widget chat, overlay sự kiện, hay các yếu tố tương tác khác cho buổi stream của mình? Hãy cùng nhau xây dựng một sản phẩm vừa hữu dụng vừa đẹp mắt nhé!",
     buttons: {
-      trello: "Tiến độ Công việc",
+      trello: "Tiến độ công việc",
       fiverr: "Hồ sơ Fiverr",
       switchLang: "English",
     },
     sections: {
-      samples: "Sản phẩm Mẫu",
+      samples: "Sản phẩm mẫu",
       pricing: "Bảng giá",
       workflow: "Quy trình thực hiện dự án",
-      tos: "Điều khoản Dịch vụ",
-      faq: "Câu hỏi Thường gặp (FAQ)",
+      tos: "Điều khoản dịch vụ",
+      faq: "Câu hỏi thường gặp (FAQ)",
     },
     pricing: {
       tiers: [
         {
-          name: "Gói Chat",
+          name: "Gói chat",
           vnd: "300.000đ",
           usd: "$20",
           features: [
@@ -193,25 +192,25 @@ export const codeCommissionContent = {
           ],
         },
         {
-          name: "Gói Chat + Sự kiện",
+          name: "Gói chat + sự kiện",
           vnd: "450.000đ",
           usd: "$35",
           features: [
-            "Bao gồm tất cả quyền lợi của Gói Chat",
+            "Bao gồm tất cả quyền lợi của Gói chat",
             "Overlay sự kiện tùy chỉnh (vd: follower mới, sub, donate)",
           ],
         },
       ],
       addOns: {
-        title: "Tiện ích Bổ sung",
+        title: "Bổ sung thêm",
         items: [
           {
-            name: "Thêm một Kiểu Chat",
+            name: "Thêm một kiểu chat",
             price: "+50.000đ / $5 mỗi cái",
             note: "Tối đa 2 kiểu thêm",
           },
           {
-            name: "Thêm một Loại Sự kiện",
+            name: "Thêm một loại sự kiện",
             price: "+50.000đ / $5 mỗi cái",
             note: "Tối đa 2 loại sự kiện thêm",
           },
@@ -225,7 +224,7 @@ export const codeCommissionContent = {
       intro:
         "Đây là quy trình làm việc tiêu chuẩn của chúng tôi để đảm bảo sự minh bạch và hiệu quả cho cả hai bên. Vui lòng xem qua các bước trước khi gửi yêu cầu.",
       formButton: {
-        text: "Điền Form Đặt Hàng",
+        text: "Điền form đặt hàng",
         url: "https://forms.gle/bsrJuRqvSrMCZhtu8",
       },
       stages: [
@@ -233,10 +232,10 @@ export const codeCommissionContent = {
           title: "Giai đoạn 1: Trước khi bắt đầu dự án",
           points: [
             "**Chuẩn bị:** Chuẩn bị đầy đủ tài liệu liên quan đến đơn hàng của bạn.",
-            "**Gửi Yêu cầu:** Điền và gửi Form đặt hàng chính thức. Đảm bảo các liên kết chia sẻ (Google Drive,...) được đặt ở trạng thái 'Bất kỳ ai có đường liên kết' với chế độ 'Người xem'.",
-            "**Xác nhận & Báo giá:** Bạn sẽ nhận được email xác nhận và báo giá từ Studio trong vòng 3 ngày.",
+            "**Gửi yêu cầu:** Điền và gửi form đặt hàng chính thức. Đảm bảo các liên kết chia sẻ (Google Drive,...) được đặt ở trạng thái 'Bất kỳ ai có đường liên kết' với chế độ 'Người xem'.",
+            "**Xác nhận & báo giá:** Bạn sẽ nhận được email xác nhận và báo giá từ Studio trong vòng 3 ngày.",
             "**Đặt cọc:** Cần đặt cọc trong vòng 2 ngày để giữ chỗ. **Khách hàng thường:** 50% giá trị đơn hàng. **VTuber mới (<6 tháng):** 20% giá trị đơn hàng.",
-            "**Dịch vụ Ưu tiên:** Có thể yêu cầu làm hỏa tốc với phụ phí (ví dụ: x1.5 cho 21 ngày, x2.0 cho 14 ngày).",
+            "**Dịch vụ ưu tiên:** Có thể yêu cầu làm hỏa tốc với phụ phí (ví dụ: x1.5 cho 21 ngày, x2.0 cho 14 ngày).",
             "**Thiết lập liên lạc:** Sau khi xác nhận cọc, Studio sẽ tạo một Google Chat Space riêng cho dự án để hai bên trao đổi.",
           ],
         },
@@ -255,8 +254,8 @@ export const codeCommissionContent = {
           points: [
             "**Thanh toán cuối:** Sau khi bạn đã đồng thuận về sản phẩm cuối cùng, vui lòng thanh toán phần còn lại.",
             "**Bàn giao:** Studio sẽ tiến hành bàn giao toàn bộ sản phẩm qua link Google Drive sau khi xác nhận thanh toán.",
-            "**Bảo hành & Lưu trữ:** Sản phẩm có thời hạn bảo hành 30 ngày. File dự án sẽ được lưu trữ trên Google Drive trong 20 ngày. Vui lòng tải về trước khi hết hạn.",
-            "**Ghi danh (Credit):** Bạn phải ghi rõ tên người tạo ra sản phẩm (credit) trong phần mô tả khi sử dụng trên các nền tảng mạng xã hội, livestream.",
+            "**Bảo hành & lưu trữ:** Sản phẩm có thời hạn bảo hành 30 ngày. File dự án sẽ được lưu trữ trên Google Drive trong 20 ngày. Vui lòng tải về trước khi hết hạn.",
+            "**Ghi danh (credit):** Bạn phải ghi rõ tên người tạo ra sản phẩm (credit) trong phần mô tả khi sử dụng trên các nền tảng mạng xã hội, livestream.",
             "**Quyền của Studio:** Studio có quyền sử dụng sản phẩm để quảng bá (portfolio, mạng xã hội) trừ khi có NDA.",
           ],
         },
@@ -274,16 +273,16 @@ export const codeCommissionContent = {
           ],
         },
         {
-          title: "B. Bàn giao và Sử dụng",
+          title: "B. Bàn giao và sử dụng",
           points: [
             "Sản phẩm sẽ được bàn giao toàn bộ cho khách hàng sau khi đã hoàn thành, tùy thuộc vào loại hình dịch vụ mà khách hàng sử dụng.",
-            "Hình thức bàn giao:\n- **Các sản phẩm Design (Stream Schedule, Overlays, Logo):** Với Stream Schedule, giao file .psd. Với các sản phẩm còn lại, giao file .png và .svg (nếu có) qua Google Drive.\n- **Các sản phẩm Code (Chat Widget):** Giao toàn bộ các file .html, .css, .js và các file khác dưới dạng file .txt thông qua Google Drive.",
+            "Hình thức bàn giao:\n- **Các sản phẩm design (Stream Schedule, Overlays, Logo):** Với Stream Schedule, giao file .psd. Với các sản phẩm còn lại, giao file .png và .svg (nếu có) qua Google Drive.\n- **Các sản phẩm code (Chat Widget):** Giao toàn bộ các file .html, .css, .js và các file khác dưới dạng file .txt thông qua Google Drive.",
             "Sản phẩm sau khi bàn giao không được tự ý chỉnh sửa bởi khách hàng hoặc bên thứ ba trừ khi có sự đồng ý bằng văn bản từ Studio. Khách hàng không được tự ý chuyển nhượng hay bán lại sản phẩm.",
             "Sản phẩm sau khi được bàn giao vẫn thuộc quyền sở hữu trí tuệ của Studio, Studio có quyền sử dụng các sản phẩm này vào mục đích quảng bá.",
-            "Sau khi đã bàn giao, khách hàng có thể sử dụng các sản phẩm tương ứng với các Giấy phép Thương mại sau:",
-            "**Giấy phép thương mại Cơ bản (miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm để đăng tải trên các nền tảng mạng xã hội (ảnh profile, banner) hoặc chia sẻ ảnh trực tiếp.\n- Sử dụng sản phẩm để livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải để tên người thực hiện dưới dạng credit.",
-            "**Giấy phép Thương mại 1 (+50% giá trị sản phẩm):** Bao gồm toàn bộ quyền lợi trong Giấy phép thương mại Cơ bản và thêm các quyền lợi sau:\n- Sử dụng sản phẩm để quảng bá, thúc đẩy doanh thu trực tiếp (bài đăng sponsorship, quảng bá sự kiện/merch,...).\n- Sử dụng sản phẩm để xây dựng thương hiệu cá nhân (panel, logo, emote, overlay, stinger).",
-            "**Giấy phép Thương mại 2 (+100% giá trị sản phẩm):** Bao gồm toàn bộ quyền lợi trong Giấy phép Thương mại 1 và thêm các quyền lợi sau:\n- Sản xuất các sản phẩm kỹ thuật số (Patreon, Membership, ảnh cho sản phẩm âm nhạc, ảnh nền kỹ thuật số,...).\n- Sản xuất các sản phẩm vật lý (keychain, card, badge,...).",
+            "Sau khi đã bàn giao, khách hàng có thể sử dụng các sản phẩm tương ứng với các giấy phép thương mại sau:",
+            "**Giấy phép thương mại cơ bản (miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm để đăng tải trên các nền tảng mạng xã hội (ảnh profile, banner) hoặc chia sẻ ảnh trực tiếp.\n- Sử dụng sản phẩm để livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải để tên người thực hiện dưới dạng credit.",
+            "**Giấy phép thương mại 1 (+50% giá trị sản phẩm):** Bao gồm toàn bộ quyền lợi trong Giấy phép thương mại cơ bản và thêm các quyền lợi sau:\n- Sử dụng sản phẩm để quảng bá, thúc đẩy doanh thu trực tiếp (bài đăng sponsorship, quảng bá sự kiện/merch,...).\n- Sử dụng sản phẩm để xây dựng thương hiệu cá nhân (panel, logo, emote, overlay, stinger).",
+            "**Giấy phép thương mại 2 (+100% giá trị sản phẩm):** Bao gồm toàn bộ quyền lợi trong Giấy phép thương mại 1 và thêm các quyền lợi sau:\n- Sản xuất các sản phẩm kỹ thuật số (Patreon, Membership, ảnh cho sản phẩm âm nhạc, ảnh nền kỹ thuật số,...).\n- Sản xuất các sản phẩm vật lý (keychain, card, badge,...).",
           ],
         },
         {
@@ -305,7 +304,7 @@ export const codeCommissionContent = {
     faq: [
       {
         q: "Bạn chấp nhận phương thức thanh toán nào?",
-        a: "Chúng tôi chấp nhận Chuyển khoản Ngân hàng, Momo, Viettel Pay, Zalo Pay (tại Việt Nam) và Paypal (đối với khách quốc tế).",
+        a: "Chúng tôi chấp nhận Chuyển khoản ngân hàng, Momo, Viettel Pay, Zalo Pay (tại Việt Nam) và Paypal (đối với khách quốc tế).",
       },
       {
         q: "Tôi sẽ nhận được những file nào?",
@@ -313,7 +312,7 @@ export const codeCommissionContent = {
       },
       {
         q: "Tôi có thể sử dụng sản phẩm cho mục đích gì? Phí thương mại đã bao gồm chưa?",
-        a: "Giấy phép Thương mại Cơ bản được bao gồm miễn phí, cho phép sử dụng trên mạng xã hội và stream phi lợi nhuận (kèm credit). Để sử dụng cho mục đích quảng cáo hoặc xây dựng thương hiệu cá nhân (logo, emote), bạn cần Giấy phép Thương mại 1 (+50% phí). Để sản xuất và bán các sản phẩm kỹ thuật số hoặc vật lý, bạn cần Giấy phép Thương mại 2 (+100% phí). Vui lòng xem Mục B trong Điều khoản Dịch vụ để biết chi tiết.",
+        a: "Giấy phép thương mại cơ bản được bao gồm miễn phí, cho phép sử dụng trên mạng xã hội và stream phi lợi nhuận (kèm credit). Để sử dụng cho mục đích quảng cáo hoặc xây dựng thương hiệu cá nhân (logo, emote), bạn cần Giấy phép thương mại 1 (+50% phí). Để sản xuất và bán các sản phẩm kỹ thuật số hoặc vật lý, bạn cần Giấy phép thương mại 2 (+100% phí). Vui lòng xem Mục B trong Điều khoản dịch vụ để biết chi tiết.",
       },
       {
         q: "Tôi có thể tự chỉnh sửa file sau khi nhận không?",
@@ -325,11 +324,11 @@ export const codeCommissionContent = {
       },
       {
         q: "Chính sách hoàn tiền của bạn là gì?",
-        a: "Chính sách hoàn tiền của chúng tôi dựa trên tiến độ của dự án: bạn sẽ được hoàn 100% nếu chúng tôi chưa bắt đầu. Nếu công việc đã bắt đầu, tiền cọc sẽ không được hoàn lại. Vui lòng tham khảo Mục D trong Điều khoản Dịch vụ để biết chi tiết.",
+        a: "Chính sách hoàn tiền của chúng tôi dựa trên tiến độ của dự án: bạn sẽ được hoàn 100% nếu chúng tôi chưa bắt đầu. Nếu công việc đã bắt đầu, tiền cọc sẽ không được hoàn lại. Vui lòng tham khảo Mục D trong Điều khoản dịch vụ để biết chi tiết.",
       },
       {
         q: "Dự án của tôi có được giữ bí mật không?",
-        a: "Thông tin cá nhân của bạn luôn được giữ bí mật. Tuy nhiên, chúng tôi có quyền chia sẻ tiến độ công việc trên mạng xã hội. Nếu dự án của bạn yêu cầu bảo mật tuyệt đối, vui lòng yêu cầu một Thỏa thuận Không tiết lộ (NDA) trước khi chúng ta bắt đầu.",
+        a: "Thông tin cá nhân của bạn luôn được giữ bí mật. Tuy nhiên, chúng tôi có quyền chia sẻ tiến độ công việc trên mạng xã hội. Nếu dự án của bạn yêu cầu bảo mật tuyệt đối, vui lòng yêu cầu một thỏa thuận không tiết lộ (NDA) trước khi chúng ta bắt đầu.",
       },
     ],
   },
