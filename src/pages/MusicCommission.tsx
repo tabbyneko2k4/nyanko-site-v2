@@ -2,7 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 // Import icons
 import { FaTrello } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, ChevronDown, ChevronUp } from "lucide-react";
 // Import các component UI cần thiết
 import {
   Accordion,
@@ -27,36 +27,61 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import LanguageSwitcherButton from "@/components/ui/LanguageSwitcherButton";
 // Import content
 import { commissionContent } from "./musicCommissionContent";
-// Import custom hook
-import { useAutoLanguage } from "@/hooks/useAutoLanguage";
 import { useLanguage } from '@/contexts/LanguageContext';
+import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
 
-// --- Dữ liệu Video Samples & SoundCloud (giữ nguyên) ---
-const youtubeSampleVideos = [
-  { id: "wX4oM-xTsow", title: "Sample Video 1" },
-  { id: "epMaVX7sI_w", title: "Sample Video 2" },
-  { id: "oVqHbMbbURM", title: "Sample Video 6" },
-  { id: "gWgt41yh7Cc", title: "Sample Video 3" },
+// --- Dữ liệu Video Samples ---
+const youtubeSamples = [
+  { id: "wX4oM-xTsow", title: "Sample Tier 1", tier: 3 },
+  { id: "gWgt41yh7Cc", title: "Sample Tier 1", tier: 3 },
+  
+  { id: "epMaVX7sI_w", title: "Sample Tier 2", tier: 3 },
+  
+  { id: "oVqHbMbbURM", title: "Sample Tier 3", tier: 3 },
 ];
-const soundcloudPlaylistUrl =
-  "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1489507381%3Fsecret_token%3Ds-SwAAYVZTnca&color=%23a1caff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
-const soundcloudUserUrl = "https://soundcloud.com/tabbyneko";
-const soundcloudSetUrl =
-  "https://soundcloud.com/tabbyneko/sets/sample-cho-khach-sample-for/s-SwAAYVZTnca";
-const soundcloudSetTitle = "Sample cho khách | Sample for customers";
+
+// --- Dữ liệu SoundCloud ---
+const soundcloudData = {
+  1: {
+    src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2155662218%3Fsecret_token%3Ds-FcdXwLfvdaU&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    link: "https://soundcloud.com/tabbyneko/sets/tier-1-sample/s-FcdXwLfvdaU",
+    title: "Tier 1 Sample - Gói 1 Sample"
+  },
+  2: {
+    src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2155715969%3Fsecret_token%3Ds-ICEcCDGO67A&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    link: "https://soundcloud.com/tabbyneko/sets/tier-2-sample/s-ICEcCDGO67A",
+    title: "Tier 2 Sample - Gói 2 Sample"
+  },
+  3: {
+    src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2155728719%3Fsecret_token%3Ds-pDKzA8csHGR&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    link: "https://soundcloud.com/tabbyneko/sets/tier-3-sample/s-pDKzA8csHGR",
+    title: "Tier 3 Sample - Gói 3 Sample"
+  }
+};
 
 const MusicCommission = () => {
   const { language } = useLanguage();
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const content = commissionContent[language];
 
+  // State quản lý việc mở rộng từng Tier
+  const [expandedTiers, setExpandedTiers] = useState<{ [key: number]: boolean }>({
+    1: false,
+    2: false,
+    3: false,
+  });
+
+  const toggleTier = (tier: number) => {
+    setExpandedTiers((prev) => ({
+      ...prev,
+      [tier]: !prev[tier],
+    }));
+  };
+
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     const toggleVisibility = () => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       window.scrollY > 300
         ? setIsScrollTopVisible(true)
         : setIsScrollTopVisible(false);
@@ -79,22 +104,41 @@ const MusicCommission = () => {
       ? Object.keys(content.pricing.tiers[0].details)
       : [];
 
-  // Helper function to parse **bold** text
-  const parseBoldText = (text) => {
-    const parts = text.split("**");
-    return parts.map((part, index) =>
-      index % 2 === 1 ? (
-        <strong key={index} className="text-foreground font-semibold">
-          {part}
-        </strong>
-      ) : (
-        part
-      )
-    );
+  // Helper function: Xử lý **bold** text và ký tự xuống dòng \n
+  const parseBoldText = (text: string) => {
+    if (!text) return null;
+    return text.split('\n').map((line, lineIndex) => (
+      <span key={lineIndex} className="block mb-1">
+        {line.split("**").map((part, index) =>
+          index % 2 === 1 ? (
+            <strong key={index} className="text-foreground font-bold">
+              {part}
+            </strong>
+          ) : (
+            part
+          )
+        )}
+      </span>
+    ));
+  };
+
+  // Helper styles cho từng Tier
+  const getTierStyles = (tier: number) => {
+    switch (tier) {
+      case 1:
+        return { badge: "bg-blue-500 text-white", border: "border-blue-500/30", text: "text-blue-500" };
+      case 2:
+        return { badge: "bg-purple-500 text-white", border: "border-purple-500/30", text: "text-purple-500" };
+      case 3:
+        return { badge: "bg-yellow-500 text-black", border: "border-yellow-500/30", text: "text-yellow-500" };
+      default:
+        return { badge: "bg-gray-500", border: "border-gray-500", text: "text-gray-500" };
+    }
   };
 
   return (
     <>
+      <NationalityWelcomeModal />
       <div className="min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
           {/* Page Title */}
@@ -146,10 +190,7 @@ const MusicCommission = () => {
                     <h3 className="text-2xl font-gaming mb-2">{tier.name}</h3>
                     <div className="mb-4">
                       <p className="text-3xl font-bold text-primary">
-                        {tier.usd}
-                      </p>
-                      <p className="text-lg text-muted-foreground">
-                        {tier.vnd}
+                        {tier.price}
                       </p>
                     </div>
                     <ul className="space-y-3 flex-grow mb-6">
@@ -245,63 +286,119 @@ const MusicCommission = () => {
 
           {/* --- Samples Section --- */}
           <div className="mb-20 animate-content-enter [animation-delay:800ms]">
-            <h2 className="text-3xl font-gaming mb-8 text-center">
+            <h2 className="text-3xl font-gaming mb-12 text-center">
               {content.sections.samples}
             </h2>
-            <div className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto mb-8">
-                {youtubeSampleVideos.map((video) => (
-                  <div
-                    key={video.id}
-                    className="aspect-video bg-muted rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${video.id}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+            
+            <div className="space-y-16 max-w-7xl mx-auto">
+              {[1, 2, 3].map((tierNum) => {
+                const styles = getTierStyles(tierNum);
+                const isExpanded = expandedTiers[tierNum];
+                
+                // Lọc video theo Tier
+                const tierVideos = youtubeSamples.filter(v => v.tier === tierNum);
+                // Kiểm tra xem có video không
+                const hasVideos = tierVideos.length > 0;
+                
+                // Lấy data soundcloud theo Tier
+                const soundcloudInfo = soundcloudData[tierNum];
+
+                return (
+                  <div key={tierNum} className={`glass-card p-6 rounded-xl border-t-4 ${styles.border} shadow-lg`}>
+                    <div className="flex items-center gap-3 mb-6">
+                       <span className={`text-2xl font-gaming ${styles.text}`}>Tier {tierNum} Collection</span>
+                       <div className="h-px flex-grow bg-border"></div>
+                    </div>
+
+                    <div className={`relative transition-all duration-700 ease-in-out ${
+                        !hasVideos 
+                            ? 'h-auto' 
+                            : (isExpanded ? 'max-h-[3000px]' : 'max-h-[450px] overflow-hidden')
+                    }`}>
+                      
+                      {hasVideos && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                          {tierVideos.map((video) => (
+                            <div
+                              key={video.id}
+                              className="relative group aspect-video bg-muted rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                            >
+                              <div className={`absolute top-0 left-0 z-10 px-3 py-1 text-xs font-bold uppercase rounded-br-lg shadow-md ${styles.badge}`}>
+                                Tier {tierNum}
+                              </div>
+                              <iframe
+                                className="w-full h-full"
+                                src={`https://www.youtube.com/embed/${video.id}`}
+                                title={video.title}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="w-full rounded-lg overflow-hidden bg-black/5">
+                        <iframe
+                            width="100%"
+                            height="450"
+                            scrolling="no"
+                            frameBorder="no"
+                            allow="autoplay"
+                            src={soundcloudInfo.src}
+                        ></iframe>
+                        <div className="px-2 py-1 bg-[#f2f2f2] dark:bg-[#1a1a1a] flex gap-1 text-[10px] text-[#cccccc] font-sans truncate border-t border-border/10">
+                            <a 
+                              href="https://soundcloud.com/tabbyneko" 
+                              title="Tabby Neko"
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
+                            >
+                              Tabby Neko
+                            </a>
+                            <span className="text-[#333] dark:text-[#cccccc]">·</span>
+                            <a 
+                              href={soundcloudInfo.link} 
+                              title={soundcloudInfo.title}
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
+                            >
+                              {soundcloudInfo.title}
+                            </a>
+                        </div>
+                      </div>
+
+                      {hasVideos && !isExpanded && (
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/80 to-transparent z-20 flex items-end justify-center pb-4">
+                        </div>
+                      )}
+                    </div>
+
+                    {hasVideos && (
+                        <div className="flex justify-center mt-6 relative z-30">
+                            <Button 
+                                variant="outline" 
+                                onClick={() => toggleTier(tierNum)}
+                                className="gap-2 min-w-[140px] shadow-sm hover:border-primary hover:text-primary transition-all"
+                            >
+                                {isExpanded ? (
+                                    <>Show Less <ChevronUp className="w-4 h-4" /></>
+                                ) : (
+                                    <>Show More <ChevronDown className="w-4 h-4" /></>
+                                )}
+                            </Button>
+                        </div>
+                    )}
                   </div>
-                ))}
-              </div>
-              <div className="glass-card p-6 rounded-lg shadow-lg max-w-7xl mx-auto">
-                <iframe
-                  width="100%"
-                  height="350"
-                  scrolling="no"
-                  frameBorder="no"
-                  allow="autoplay"
-                  src={soundcloudPlaylistUrl}
-                  className="mb-2"
-                ></iframe>
-                <div className="text-sm text-muted-foreground font-sans">
-                  <a
-                    href={soundcloudUserUrl}
-                    title="Tabby Neko"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Tabby Neko
-                  </a>
-                  {" · "}
-                  <a
-                    href={soundcloudSetUrl}
-                    title={soundcloudSetTitle}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    {soundcloudSetTitle}
-                  </a>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* --- NEW: Workflow Section --- */}
+          {/* --- Workflow Section --- */}
           <div className="mb-20 animate-content-enter [animation-delay:600ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">
               {content.sections.workflow}
@@ -351,21 +448,58 @@ const MusicCommission = () => {
             </div>
           </div>
 
-          {/* --- TOS & FAQ Sections --- */}
+          {/* --- TOS Section (LOGIC MỚI: Iframe cho TV, Text cho TA) --- */}
           <div className="mb-20 animate-content-enter [animation-delay:1000ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">
               {content.sections.tos}
             </h2>
-            <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
-              <iframe
-                src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
-                title="Terms of Service"
-                className="w-full h-[75vh] border-none rounded-lg bg-white"
-              >
-                Loading Terms of Service...
-              </iframe>
-            </div>
+            
+            {/* Kiểm tra ngôn ngữ */}
+            {language === 'vi' ? (
+                // Nếu là Tiếng Việt: Giữ nguyên Iframe Google Docs
+                <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
+                  <iframe
+                    src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
+                    title="Terms of Service"
+                    className="w-full h-[75vh] border-none rounded-lg bg-white"
+                  >
+                    Loading Terms of Service...
+                  </iframe>
+                </div>
+            ) : (
+                // Nếu là Tiếng Anh (hoặc khác): Hiển thị nội dung Text
+                <div className="max-w-4xl mx-auto">
+                  <div className="glass-card p-8 rounded-lg shadow-lg">
+                    {content.tos?.intro && (
+                        <p className="text-center italic text-muted-foreground mb-8">
+                        {parseBoldText(content.tos.intro)}
+                        </p>
+                    )}
+                    <div className="space-y-10">
+                      {content.tos?.sections?.map((section, idx) => (
+                        <div key={idx}>
+                          <h3 className="text-2xl font-gaming text-primary mb-4 border-b border-primary/20 pb-2">
+                            {section.title}
+                          </h3>
+                          <ul className="space-y-4">
+                            {section.points.map((point, pIdx) => (
+                              <li key={pIdx} className="flex items-start gap-3 text-muted-foreground">
+                                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] flex-shrink-0"></div>
+                                <div className="text-base leading-relaxed">
+                                    {parseBoldText(point)}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+            )}
           </div>
+
+          {/* --- FAQ Section --- */}
           <div className="animate-content-enter [animation-delay:1200ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">
               {content.sections.faq}

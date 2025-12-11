@@ -18,37 +18,45 @@ export const codeCommissionContent = {
     pricing: {
       tiers: [
         {
-          name: "Chat Widget",
-          vnd: "USD 20",
-          usd: "VND 300.000",
-          features: ["Custom chat widget design", "Styled to match your brand"],
+          name: "Chat Package",
+          price: "$15",
+          features: [
+            "One design for all messages.",
+            "Can change color as needed.",
+          ],
         },
         {
-          name: "Chat + Event Widget",
-          vnd: "USD 35",
-          usd: "VND 450.000",
+          name: "Chat and Event Package",
+          price: "$30",
           features: [
-            "Includes everything in the Chat Widget package",
-            "Custom event overlay (e.g., new follower, subscriber, donation)",
+            "Includes chat features.",
+            "Includes event features (New Membership, Membership Renewal, Donate, Superchat).",
+            "One design for all messages and one design for all event types.",
+            "Can change color as needed.",
           ],
         },
       ],
       addOns: {
-        title: "Available Add-ons",
+        title: "Add-ons",
         items: [
           {
-            name: "Additional Chat Style",
-            price: "+$5 / 50.000đ each",
-            note: "Up to 2 extra styles",
+            name: "Additional design for one chat/event type",
+            price: "$5 each",
+            note: "If there are additional designs for different chats/events.",
           },
           {
-            name: "Additional Event Type",
-            price: "+$5 / 50.000đ each",
-            note: "Up to 2 extra event types",
+            name: "Animation",
+            price: "$10 - $25 each",
+            note: "Negotiate and discuss details.",
+          },
+          {
+            name: "Emote/Membership Badge",
+            price: "$10 per set",
+            note: "Please provide sufficient badges/emotes.",
           },
         ],
       },
-      note: "Prices are for standard features. Complex requests may have custom pricing.",
+      note: "Prices apply to standard features. Complex requests may have a separate quote.\nIf membership has not been enabled or new emotes have just been added, please contact us.",
     },
     workflow: {
       // Giữ nguyên từ Music
@@ -183,21 +191,21 @@ export const codeCommissionContent = {
     pricing: {
       tiers: [
         {
-          name: "Gói chat",
-          vnd: "300.000đ",
-          usd: "$20",
+          name: "Gói Chat",
+          price: "150.000đ",
           features: [
-            "Thiết kế widget chat tùy chỉnh",
-            "Tinh chỉnh theo phong cách thương hiệu của bạn",
+            "Một design cho tất cả tin nhắn.",
+            "Có thể đổi màu theo nhu cầu.",
           ],
         },
         {
-          name: "Gói chat + sự kiện",
-          vnd: "450.000đ",
-          usd: "$35",
+          name: "Gói chat và Event",
+          price: "300.000đ",
           features: [
-            "Bao gồm tất cả quyền lợi của Gói chat",
-            "Overlay sự kiện tùy chỉnh (vd: follower mới, sub, donate)",
+            "Gồm các tính năng của chat.",
+            "Gồm các tính năng của event (New Membership, Gia hạn Membership, Donate, Superchat).",
+            "Một design cho tất cả tin nhắn và một design cho tất cả các loại event.",
+            "Có thể đổi màu theo nhu cầu.",
           ],
         },
       ],
@@ -205,18 +213,23 @@ export const codeCommissionContent = {
         title: "Bổ sung thêm",
         items: [
           {
-            name: "Thêm một kiểu chat",
-            price: "+50.000đ / $5 mỗi cái",
-            note: "Tối đa 2 kiểu thêm",
+            name: "Thêm design cho một kiểu chat/event",
+            price: "+50.000đ mỗi cái",
+            note: "Nếu như có thêm design cho các chat/event khác nhau.",
           },
           {
-            name: "Thêm một loại sự kiện",
-            price: "+50.000đ / $5 mỗi cái",
-            note: "Tối đa 2 loại sự kiện thêm",
+            name: "Animation",
+            price: "+100.000 - 250.000đ mỗi cái",
+            note: "Thương lượng và trao đổi chi tiết.",
+          },
+          {
+            name: "Emote/Badge membership",
+            price: "+100.000đ một bộ",
+            note: "Vui lòng cung cấp đủ badge/emote.",
           },
         ],
       },
-      note: "Giá áp dụng cho các tính năng tiêu chuẩn. Yêu cầu phức tạp có thể có báo giá riêng.",
+      note: "Giá áp dụng cho các tính năng tiêu chuẩn. Yêu cầu phức tạp có thể có báo giá riêng.\nNếu chưa mở hội viên hoặc vừa thêm emote mới, hãy liên hệ tụi mình.",
     },
     workflow: {
       // Giữ nguyên từ Music

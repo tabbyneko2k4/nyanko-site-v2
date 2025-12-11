@@ -6,6 +6,7 @@ import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton'; // Import component nút cờ
 import { commissionLandingContent as contentData } from './commissionLandingContent';
 import { useLanguage } from '@/contexts/LanguageContext';
+import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
 
 const CommissionLandingPage = () => {
   const { language } = useLanguage();
@@ -22,6 +23,7 @@ const CommissionLandingPage = () => {
 
   return (
     <>
+      <NationalityWelcomeModal />
       <div className="min-h-screen pt-20 pb-12 flex items-center bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
           

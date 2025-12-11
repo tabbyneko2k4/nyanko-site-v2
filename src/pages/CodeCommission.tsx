@@ -13,6 +13,7 @@ import { codeCommissionContent } from "./codeCommissionContent"; // THAY ĐỔI 
 // Import custom hook
 import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
 
 // --- Dữ liệu Samples cho Code ---
 // THAY THẾ bằng đường dẫn đến ảnh của bạn
@@ -53,6 +54,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
 
   return (
     <>
+      <NationalityWelcomeModal />
       <div className="min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
           
@@ -87,8 +89,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
                 <div key={index} className="glass-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex flex-col">
                   <h3 className="text-2xl font-gaming mb-2">{tier.name}</h3>
                   <div className="mb-4">
-                    <p className="text-3xl font-bold text-primary">{tier.vnd}</p>
-                    <p className="text-lg text-muted-foreground">{tier.usd}</p>
+                    <p className="text-3xl font-bold text-primary">{tier.price}</p>
                   </div>
                   <ul className="space-y-3 flex-grow mb-6">
                     {tier.features.map((feature, i) => (

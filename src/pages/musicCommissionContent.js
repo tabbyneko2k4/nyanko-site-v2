@@ -67,15 +67,14 @@ export const commissionContent = {
       tiers: [
         {
           name: "Tier 1",
-          usd: "USD 30",
-          vnd: "VND 400.000",
+          price: "USD 30",
           features: [
             "Up to 60 seconds",
-            "Basic genres like Lo-fi, Piano",
+            "Basic genres like Lo-fi, Piano, Simple Kawaii Beats",
             "Ideal for Intros, Outros, BGM",
           ],
           details: {
-            genre: "Lo-fi, Piano, Chiptune",
+            genre: "Lo-fi, Piano, Simple Kawaii Beats",
             duration: "Up to 60 seconds",
             useCase: "Intro, Outro, BGM",
             structure: "1 Intro - 1 Buildup (optional) - 1 Drop",
@@ -90,8 +89,7 @@ export const commissionContent = {
         },
         {
           name: "Tier 2",
-          usd: "USD 50",
-          vnd: "VND 800.000",
+          price: "USD 50",
           features: [
             "Up to 150 seconds",
             "Wider genre selection",
@@ -114,8 +112,7 @@ export const commissionContent = {
         },
         {
           name: "Tier 3",
-          usd: "From USD 100",
-          vnd: "From VND 1.500.000",
+          price: "From USD 100",
           features: [
             "Up to 300 seconds",
             "Custom structure",
@@ -193,37 +190,37 @@ export const commissionContent = {
     faq: [
       {
         q: "What payment methods do you accept?",
-        a: "We accept Bank Transfer, Momo, Viettel Pay, Zalo Pay (within Vietnam) and PayPal (for international clients with USD).",
+        a: "We accept PayPal.",
       },
       {
-        q: "Can I request revisions?",
-        a: "Yes, a reasonable number of minor revisions are included in the price to ensure you are happy with the final product. Major changes requested after the initial direction has been approved may incur additional fees.",
+        q: "What files will I receive?",
+        a: "For music commissions, you will receive the final .wav file, stems (.zip), and the project file (.flp) if agreed upon. All files are delivered via email.",
       },
       {
-        q: "What can I use the music for? Is commercial use included?",
-        a: "A 'Basic Commercial License' is included for free with every commission. This allows you to use the music on social media, for livestreams, or in non-profit videos, provided you give credit. For uses like distributing on Spotify, for-profit events, or selling physical products (CDs, Vinyl), you will need to purchase the 'Commercial License 2' for an additional fee. Please see Section B of our Terms of Service for full details.",
+        q: "Is commercial use included?",
+        a: "Non-Commercial Use is included by default. This allows use in livestreams, personal videos, and social media, with proper credit. For any revenue-generating use—such as music platform releases, commercial projects, merchandise, Patreon content, or live performances—a Commercial License (+100% of the base price) is required.",
       },
       {
-        q: "Who owns the copyright to the music?",
-        a: "The Studio retains the full intellectual property rights to the composition. When you commission a piece, you are purchasing a license to use it according to the agreed-upon terms. We also reserve the right to use the music for our own promotional purposes (e.g., in our portfolio).",
+        q: "Can I edit the music after delivery?",
+        a: "No. You may not modify, alter, remix, or redistribute the product without written consent from the Studio. If you need adjustments, please contact us directly.",
       },
       {
-        q: "What is your refund policy? Can I cancel my order?",
-        a: "Yes, you can cancel an order. Our refund policy is based on the project's progress: a 100% refund is available if we haven't started. If work has begun, the deposit is non-refundable. Please refer to Section D of our Terms of Service for a detailed breakdown.",
+        q: "Who owns the rights to the music?",
+        a: "The Studio retains full intellectual property rights. You are purchasing a license to use the music under the agreed Terms of Service. The Studio may showcase the work for promotional purposes unless an NDA is requested.",
+      },
+      {
+        q: "What is your refund policy?",
+        a: "If the project has not started (no 50% progress update), we offer a full refund of the deposit. Once work has begun (50% update delivered), the deposit becomes non-refundable. Demo versions or previews may not be used if the project is canceled.",
+      },
+      {
+        q: "Can I use the demo version if the commission is canceled?",
+        a: "No. All demos, previews, and draft versions remain the property of the Studio and cannot be used, posted, reproduced, or distributed under any circumstances.",
       },
       {
         q: "Will my project be kept confidential?",
-        a: "Your personal information is always kept confidential. However, we reserve the right to share progress of the work (e.g., clips, screenshots) on social media. If your project requires complete secrecy, please request a Non-Disclosure Agreement (NDA) before we begin.",
+        a: "Your personal information is always kept confidential. The Studio may share progress or previews unless you request a Non-Disclosure Agreement (NDA) before work begins.",
       },
-      {
-        q: "What file formats will I receive?",
-        a: "Upon completion, you will receive the final track in high-quality WAV and compressed MP3 formats. The project file (FLP) can also be delivered if it's part of your commission agreement.",
-      },
-      {
-        q: "Are there any types of projects you don't accept?",
-        a: "Yes. We do not accept any commissions intended for use with NFTs or for training AI models. We also reserve the right to refuse projects with pornographic, political, religious, hateful, or discriminatory themes.",
-      },
-    ],
+    ]
   },
   vi: {
     pageTitle: { main: "NHẬN", highlight: "ĐẶT NHẠC" },
@@ -293,15 +290,14 @@ export const commissionContent = {
       tiers: [
         {
           name: "Gói 1",
-          vnd: "$30",
-          usd: "400.000đ",
+          price: "500.000đ",
           features: [
             "Tối đa 60 giây",
-            "Thể loại cơ bản: Lo-fi, Piano",
+            "Thể loại cơ bản: Lo-fi, Piano, Simple Kawaii Beats",
             "Lý tưởng cho Intro, Outro, BGM",
           ],
           details: {
-            genre: "Lo-fi, Piano, Chiptune",
+            genre: "Lo-fi, Piano, Simple Kawaii Beats",
             duration: "Tối đa 60 giây",
             useCase: "Intro, Outro, BGM",
             structure: "1 Intro - 1 Buildup (nếu có) - 1 Drop",
@@ -317,8 +313,7 @@ export const commissionContent = {
         },
         {
           name: "Gói 2",
-          vnd: "$50",
-          usd: "800.000đ",
+          price: "1.000.000đ",
           features: [
             "Tối đa 150 giây",
             "Nhiều lựa chọn thể loại hơn",
@@ -342,8 +337,7 @@ export const commissionContent = {
         },
         {
           name: "Gói 3",
-          vnd: "Từ $100",
-          usd: "Từ 1.500.000đ",
+          price: "Từ 1.500.000đ",
           features: [
             "Tối đa 300 giây",
             "Cấu trúc tùy chỉnh",
@@ -421,37 +415,33 @@ export const commissionContent = {
     },
     faq: [
       {
-        q: "Bạn chấp nhận phương thức thanh toán nào?",
-        a: "Chúng tôi chấp nhận Chuyển khoản ngân hàng, Momo, Viettel Pay, Zalo Pay (tại Việt Nam) và Paypal (đối với khách quốc tế).",
+        "q": "Bạn chấp nhận những phương thức thanh toán nào?",
+        "a": "Tôi chấp nhận thanh toán qua Chuyển khoản ngân hàng, Momo, ViettelPay, ZaloPay."
       },
       {
-        q: "Tôi có thể yêu cầu chỉnh sửa không?",
-        a: "Có, một số lần chỉnh sửa nhỏ hợp lý đã được bao gồm trong giá để đảm bảo bạn hài lòng với sản phẩm cuối cùng. Các thay đổi lớn được yêu cầu sau khi phương hướng ban đầu đã được duyệt có thể phát sinh thêm chi phí.",
+        "q": "Tôi sẽ nhận được những file gì khi đặt sản phẩm âm nhạc?",
+        "a": "Bạn sẽ nhận được file .wav chất lượng cao, file stem, file project gốc (nếu được yêu cầu). Tất cả được bàn giao qua Google Drive."
       },
       {
-        q: "Tôi có thể sử dụng nhạc cho những mục đích nào? Giá đã bao gồm phí thương mại chưa?",
-        a: "'Giấy phép thương mại cơ bản' được bao gồm miễn phí trong mỗi đơn hàng. Giấy phép này cho phép bạn sử dụng nhạc trên mạng xã hội, livestream, hoặc trong video phi lợi nhuận, với điều kiện phải ghi credit. Đối với các mục đích như phát hành lên Spotify, sự kiện có thu lợi nhuận, hoặc bán sản phẩm vật lý (CD, Vinyl), bạn sẽ cần mua 'Giấy phép thương mại 2' với một khoản phí bổ sung. Vui lòng xem Mục B trong Điều khoản dịch vụ của chúng tôi để biết chi tiết.",
+        "q": "Tôi có thể sử dụng bài nhạc cho mục đích gì? Đã bao gồm phí thương mại chưa?",
+        "a": "Giấy phép thương mại cơ bản được bao gồm miễn phí, cho phép bạn sử dụng bài nhạc trên mạng xã hội, livestream hoặc video phi lợi nhuận (kèm credit). Nếu bạn muốn sử dụng nhạc cho quảng cáo, tài trợ, thương hiệu cá nhân, hoặc gắn vào sản phẩm kỹ thuật số/ vật lý thương mại, bạn cần nâng cấp lên các gói Giấy phép thương mại 2 (+100%). Chi tiết xem trong Mục B của Điều khoản dịch vụ."
       },
       {
-        q: "Ai là người sở hữu bản quyền của bản nhạc?",
-        a: "Studio giữ toàn quyền sở hữu trí tuệ đối với tác phẩm. Khi bạn đặt làm nhạc, bạn đang mua giấy phép để sử dụng nó theo các điều khoản đã thỏa thuận. Chúng tôi cũng có quyền sử dụng bản nhạc cho các mục đích quảng bá của mình (ví dụ: trong portfolio).",
+        "q": "Tôi có được quyền chỉnh sửa hoặc remix bài nhạc sau khi nhận không?",
+        "a": "Không. Bạn không được tự chỉnh sửa, remix, tách vocal/beat, hoặc giao cho bên thứ ba chỉnh sửa khi chưa có sự đồng ý bằng văn bản. Điều này nhằm đảm bảo chất lượng và giữ sự thống nhất trong sản phẩm. Nếu bạn muốn chỉnh sửa, hãy liên hệ để được hỗ trợ."
       },
       {
-        q: "Chính sách hoàn tiền của bạn là gì? Tôi có thể hủy đơn hàng không?",
-        a: "Có, bạn có thể hủy đơn hàng. Chính sách hoàn tiền của chúng tôi dựa trên tiến độ của dự án: bạn sẽ được hoàn 100% nếu chúng tôi chưa bắt đầu. Nếu công việc đã bắt đầu, tiền cọc sẽ không được hoàn lại. Vui lòng tham khảo Mục D trong Điều khoản dịch vụ để biết chi tiết.",
+        "q": "Ai sở hữu bản quyền bài nhạc?",
+        "a": "Studio là tổ chức giữ quyền sở hữu trí tuệ đối với toàn bộ tác phẩm âm nhạc (beat, phối khí, melody, cấu trúc). Bạn mua **giấy phép sử dụng**, không phải mua đứt bản quyền. Studio cũng có quyền dùng bài nhạc trong portfolio trừ khi bạn yêu cầu NDA."
       },
       {
-        q: "Dự án của tôi có được giữ bí mật không?",
-        a: "Thông tin cá nhân của bạn luôn được giữ bí mật. Tuy nhiên, chúng tôi có quyền chia sẻ tiến độ công việc (ví dụ: các đoạn clip, hình ảnh) trên mạng xã hội. Nếu dự án của bạn yêu cầu bảo mật tuyệt đối, vui lòng yêu cầu một thỏa thuận không tiết lộ (NDA) trước khi chúng ta bắt đầu.",
+        "q": "Chính sách hoàn tiền như thế nào?",
+        "a": "Nếu tôi chưa bắt đầu dự án, bạn được hoàn 100%. Khi dự án đã bắt đầu, tiền cọc sẽ không được hoàn lại. Ở giai đoạn cập nhật thứ hai, bạn cần thanh toán phần còn lại và tôi sẽ bàn giao sản phẩm đúng tiến độ nhưng không hỗ trợ chỉnh sửa thêm. Vui lòng xem Mục D trong Điều khoản dịch vụ."
       },
       {
-        q: "Tôi sẽ nhận được những định dạng file nào?",
-        a: "Sau khi hoàn thành, bạn sẽ nhận được bản nhạc cuối cùng ở định dạng WAV chất lượng cao và MP3 đã nén. File project (FLP) cũng có thể được bàn giao nếu điều đó nằm trong thỏa thuận đặt hàng của bạn.",
-      },
-      {
-        q: "Có loại dự án nào mà bạn không nhận làm không?",
-        a: "Có. Chúng tôi không chấp nhận bất kỳ đơn đặt hàng nào nhằm mục đích sử dụng cho NFT hoặc để huấn luyện các mô hình AI. Chúng tôi cũng có quyền từ chối các dự án có chủ đề khiêu dâm, chính trị, tôn giáo, thù địch hoặc phân biệt đối xử.",
-      },
-    ],
+        "q": "Dự án âm nhạc của tôi có được giữ bí mật không?",
+        "a": "Tất cả thông tin của bạn được bảo mật. Tôi có thể đăng tiến độ dự án trừ khi bạn yêu cầu ký NDA. Nếu bạn cần hoàn toàn riêng tư, vui lòng báo trước để tôi bảo lưu toàn bộ nội dung."
+      }
+    ]
   },
 };
