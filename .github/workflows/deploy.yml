@@ -26,10 +26,10 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
 
           # local build folder
-          local-dir: dist
+          local-dir: dist/
 
           # server destination folder
-          server-dir: public_html
+          server-dir: public_html/
 
           # DO NOT delete files on server
           # ensures only overwrite, keep other files
