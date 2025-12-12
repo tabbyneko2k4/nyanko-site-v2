@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via FTP (overwrite only)
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
@@ -28,10 +28,12 @@ jobs:
           # local build folder
           local-dir: dist
 
-          # where to upload on cPanel
+          # server destination folder
           server-dir: public_html
 
-          # Very important: DO NOT DELETE extra files on server
-          dangerous-clean-slate: false
-          # Only update changed files
-          git-ftp-args: --auto-init
+          # DO NOT delete files on server
+          # ensures only overwrite, keep other files
+          exclude: |
+            **/.git*
+            **/node_modules/*
+            **/src/*
