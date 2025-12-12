@@ -179,12 +179,13 @@ export const commissionContent = {
           ],
         },
         {
-          title: "D. Termination and Refund",
-          points: [
+          "title": "D. Termination and Refund",
+          "points": [
             "Both the Studio and the client may terminate the agreement at any time by providing written notice to the other party.",
-            "Upon termination, payment and product delivery will be handled as follows:\n- Before project start: The Studio will refund 100% of the deposit paid by the client.\n- After project start and before the first update: The Studio will not refund the deposit and will send the product in its current state of progress.\n- At the second update: The client must pay the remaining balance to the Studio, and the Studio will send the product in its current state of progress with no further support.",
-          ],
-        },
+            "Upon termination, payment and product delivery will be handled as follows:\n- After the Studio has begun working on the project: The Studio will not refund the deposit and will send the product according to its current progress.\n- At the second update: The client must pay the remaining balance to the Studio, and the Studio will deliver the product according to its current progress with no further support."
+          ]
+        }
+
       ],
     },
     faq: [
@@ -376,42 +377,7 @@ export const commissionContent = {
       note: "Giá trên là ước tính và có thể thay đổi tùy độ phức tạp. Liên hệ để có báo giá cụ thể.",
     },
     tos: {
-      intro:
-        "*Hãy đảm bảo rằng bạn đã chấp nhận những điều khoản này trước khi đặt hàng.*",
-      sections: [
-        {
-          title: "A. Quy định",
-          points: [
-            "Trong bất kì trường hợp nào, khách hàng không được phép sử dụng bất kì phần nào của sản phẩm được bàn giao bởi Studio để phục vụ cho NFT hoặc sử dụng làm tài nguyên, tài liệu tham khảo để tạo ra các sản phẩm bằng phần mềm và trình tạo AI.",
-            "Studio không chấp nhận việc sử dụng bất kỳ phần nào của sản phẩm vào mục đích khiêu dâm, chính trị, tôn giáo, thù địch hoặc phân biệt đối xử. Chúng tôi có quyền từ chối làm việc nếu khách hàng có mục đích liên quan đến những nội dung trên.",
-          ],
-        },
-        {
-          title: "B. Bàn giao và sử dụng",
-          points: [
-            "Sản phẩm sẽ được bàn giao toàn bộ cho khách hàng sau khi đã hoàn thành. Sẽ được bàn giao file âm thanh dưới dạng chất lượng gốc (wav), file âm thanh đã nén (mp3) và file project (flp) nếu yêu cầu.",
-            "Sản phẩm sau khi bàn giao không được tự ý chỉnh sửa bởi khách hàng hoặc bên thứ ba trừ khi có sự đồng ý bằng văn bản từ Studio. Khách hàng không được tự ý chuyển nhượng hay bán lại sản phẩm.",
-            "Sản phẩm sau khi được bàn giao vẫn thuộc quyền sở hữu trí tuệ của Studio, Studio có quyền sử dụng các sản phẩm này vào mục đích quảng bá.",
-            "Sau khi đã bàn giao, khách hàng có thể sử dụng các sản phẩm tương ứng với các giấy phép thương mại sau:",
-            "**Giấy phép thương mại cơ bản (miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm sau khi được bàn giao để đăng tải trên các nền tảng mạng xã hội.\n- Sử dụng sản phẩm để livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải để tên người thực hiện dưới dạng credit.",
-            "**Giấy phép thương mại 2 (+100% giá trị sản phẩm):** Bao gồm toàn bộ quyền lợi trong giấy phép thương mại 1 và thêm các quyền lợi sau:\n- Phát tại các buổi sự kiện có lợi nhuận.\n- Sản xuất các sản phẩm kỹ thuật số: Patreon, Membership hay bất cứ nền tảng trao đổi kỹ thuật số nào.\n- Phân phối trên các nền tảng phát nhạc trực tuyến (Spotify, Apple Music,...)\n- Sản xuất các sản phẩm vật lý: CD, Vinyl...",
-          ],
-        },
-        {
-          title: "C. Bảo mật",
-          points: [
-            "Studio xác nhận và cam kết rằng mọi thông tin do khách hàng cung cấp sẽ được coi là thông tin bảo mật và không được tiết lộ công khai. Tất cả các bên có nghĩa vụ giữ kín thông tin này và chỉ sử dụng vào mục đích lưu trữ.",
-            "Studio có quyền chia sẻ tiến độ dự án trên các nền tảng mạng xã hội, livestream trừ khi khách hàng yêu cầu cam kết thỏa thuận bảo mật (NDA).",
-          ],
-        },
-        {
-          title: "D. Chấm dứt và hoàn tiền",
-          points: [
-            "Cả hai bên Studio và khách hàng có thể chấm dứt thỏa thuận bất kỳ lúc nào bằng cách gửi thông báo bằng văn bản cho bên còn lại.",
-            "Sau khi chấm dứt, khoản thanh toán và sản phẩm sẽ được quy định như sau:\n- Chưa bắt đầu: Studio sẽ hoàn trả 100% số tiền cọc mà khách hàng đã thanh toán.\n- Khi Studio đã bắt đầu thực hiện dự án và trước lần cập nhật thứ nhất: Studio sẽ không hoàn trả tiền cọc và gửi sản phẩm theo tiến độ đang thực hiện.\n- Tại lần cập nhật thứ hai: Khách hàng thanh toán phần còn lại cho Studio và Studio sẽ gửi sản phẩm theo tiến độ thực hiện và không hỗ trợ gì thêm.",
-          ],
-        },
-      ],
+
     },
     faq: [
       {

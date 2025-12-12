@@ -15,6 +15,14 @@ export const codeCommissionContent = {
       tos: "Terms of Service",
       faq: "Frequently Asked Questions (FAQ)",
     },
+    combos: [
+      { content: "1 Chat Design (1 color or 4-role colors) + Event Default", price: "$15" },
+      { content: "1 Chat Design (1 color or 4-role colors) + 1 Event Design", price: "$30" },
+      { content: "1 Chat Design (1 color or 4-role colors) + 5 Event Designs (3 MBS, 2 SPC)", price: "$55" },
+      { content: "4 Chat Designs for 4 Roles + Event Default", price: "$40" },
+      { content: "4 Chat Designs for 4 Roles + 1 Event Design", price: "$55" },
+      { content: "4 Chat Designs for 4 Roles + 5 Event Designs (3 MBS, 2 SPC)", price: "$80" },
+    ],
     pricing: {
       tiers: [
         {
@@ -188,6 +196,14 @@ export const codeCommissionContent = {
       tos: "Điều khoản dịch vụ",
       faq: "Câu hỏi thường gặp (FAQ)",
     },
+    combos: [
+      { content: "1 Chat Design (1 màu hoặc đổi màu 4 Role) + Event Default", price: "150.000đ" },
+      { content: "1 Chat Design (1 màu hoặc đổi màu 4 Role) + 1 Event Design", price: "300.000đ" },
+      { content: "1 Chat Design (1 màu hoặc đổi màu 4 Role) + 5 Event Design (3 MBS, 2 SPC)", price: "550.000đ" },
+      { content: "4 Chat Design cho 4 Role + Event Default", price: "400.000đ" },
+      { content: "4 Chat Design cho 4 Role + 1 Event Design", price: "550.000đ" },
+      { content: "4 Chat Design cho 4 Role + 5 Event Design (3 MBS, 2 SPC)", price: "800.000đ" },
+    ],
     pricing: {
       tiers: [
         {

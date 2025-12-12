@@ -7,32 +7,20 @@ import { ArrowUp } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton'; // Chỉnh lại đường dẫn nếu cần
+import LanguageSwitcherButton from '@/components/ui/LanguageSwitcherButton';
 // Import content
-import { codeCommissionContent } from "./codeCommissionContent"; // THAY ĐỔI IMPORT
+import { codeCommissionContent } from "./codeCommissionContent";
 // Import custom hook
 import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
 
-// --- Dữ liệu Samples cho Code ---
-// THAY THẾ bằng đường dẫn đến ảnh của bạn
-const sampleImages = [
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Chat+Widget+1", alt: "Sample Chat Widget 1" },
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Event+Overlay+1", alt: "Sample Event Overlay 1" },
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Chat+Widget+2", alt: "Sample Chat Widget 2" },
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Custom+Element", alt: "Sample Custom Element" },
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Chat+Widget+3", alt: "Sample Chat Widget 3" },
-  { src: "https://placehold.co/600x400/a1caff/ffffff?text=Event+Overlay+2", alt: "Sample Event Overlay 2" },
-];
-
-const CodeCommission = () => { // ĐỔI TÊN COMPONENT
+const CodeCommission = () => {
   const { language } = useLanguage();
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
-  const content = codeCommissionContent[language]; // THAY ĐỔI CONTENT OBJECT
+  const content = codeCommissionContent[language];
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     const toggleVisibility = () => { window.scrollY > 300 ? setIsScrollTopVisible(true) : setIsScrollTopVisible(false); };
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
@@ -57,7 +45,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
       <NationalityWelcomeModal />
       <div className="min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
-          
+
           {/* Page Title */}
           <h1 className="text-4xl md:text-5xl font-gaming mb-8 text-center animate-content-enter">
             {content.pageTitle.main}{" "}
@@ -78,11 +66,11 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
               </div>
             </div>
           </div>
-          
+
           {/* --- Pricing Section --- */}
           <div className="mb-20 animate-content-enter [animation-delay:400ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.pricing}</h2>
-            
+
             {/* Các gói giá */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {content.pricing.tiers.map((tier, index) => (
@@ -105,46 +93,40 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
 
             {/* Tiện ích bổ sung (Add-ons) */}
             <div className="max-w-2xl mx-auto mt-12">
-                <h3 className="text-xl font-gaming text-center mb-4">{content.pricing.addOns.title}</h3>
-                <div className="glass-card p-6 rounded-lg space-y-4">
-                    {content.pricing.addOns.items.map((item, index) => (
-                        <div key={index} className="flex justify-between items-center">
-                            <div>
-                                <p className="font-semibold text-foreground">{item.name}</p>
-                                <p className="text-sm text-muted-foreground">{item.note}</p>
-                            </div>
-                            <p className="font-bold text-primary">{item.price}</p>
-                        </div>
-                    ))}
-                </div>
+              <h3 className="text-xl font-gaming text-center mb-4">{content.pricing.addOns.title}</h3>
+              <div className="glass-card p-6 rounded-lg space-y-4">
+                {content.pricing.addOns.items.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center">
+                    <div>
+                      <p className="font-semibold text-foreground">{item.name}</p>
+                      <p className="text-sm text-muted-foreground">{item.note}</p>
+                    </div>
+                    <p className="font-bold text-primary">{item.price}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <p className="text-center text-muted-foreground mt-8">{content.pricing.note}</p>
+
+            <p className="text-center text-muted-foreground mt-8 whitespace-pre-line">{content.pricing.note}</p>
           </div>
 
-          {/* --- Samples Section (Image Gallery) ---
-          <div className="mb-20 animate-content-enter [animation-delay:600ms]">
-            <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.samples}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {sampleImages.map((image, index) => (
-                <Dialog key={index}>
-                  <DialogTrigger asChild>
-                    <div className="group aspect-video bg-muted rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-auto p-2 bg-transparent border-none">
-                     <img src={image.src} alt={image.alt} className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg" />
-                  </DialogContent>
-                </Dialog>
+          {/* --- Combos Section (New) --- */}
+          <div className="mb-12 max-w-6xl mx-auto animate-content-enter [animation-delay:300ms]">
+            <h3 className="text-xl font-gaming text-center mb-4">Combo</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {content.combos && content.combos.map((combo, index) => (
+                <div key={index} className="glass-card p-6 rounded-xl shadow-lg flex flex-col justify-between hover:shadow-xl hover:scale-105 transition-all duration-300">
+                  <p className="font-medium text-lg mb-4 text-center leading-relaxed text-foreground/90">
+                    {combo.content}
+                  </p>
+                  <div className="text-center pt-4 border-t border-white/10 mt-auto">
+                    <span className="text-2xl font-bold text-primary">{combo.price}</span>
+                  </div>
+                </div>
               ))}
             </div>
-          </div> */}
-          
+          </div>
+
           {/* --- Workflow Section --- */}
           <div className="mb-20 animate-content-enter [animation-delay:800ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.workflow}</h2>
@@ -175,20 +157,20 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
               </div>
             </div>
           </div>
-          
+
           {/* --- TOS & FAQ Sections --- */}
-            <div className="mb-20 animate-content-enter [animation-delay:1000ms]">
-                <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.tos}</h2>
-                <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
-                    <iframe
-                        src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
-                        title="Terms of Service"
-                        className="w-full h-[75vh] border-none rounded-lg bg-white"
-                    >
-                        Loading Terms of Service...
-                    </iframe>
-                </div>
+          <div className="mb-20 animate-content-enter [animation-delay:1000ms]">
+            <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.tos}</h2>
+            <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
+              <iframe
+                src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
+                title="Terms of Service"
+                className="w-full h-[75vh] border-none rounded-lg bg-white"
+              >
+                Loading Terms of Service...
+              </iframe>
             </div>
+          </div>
           <div className="animate-content-enter [animation-delay:1200ms]">
             <h2 className="text-3xl font-gaming mb-8 text-center">{content.sections.faq}</h2>
             <div className="max-w-4xl mx-auto">
@@ -204,7 +186,7 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
           </div>
         </div>
       </div>
-      
+
       {/* Cụm nút sticky */}
       <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
         {isScrollTopVisible && (<Button variant="outline" size="icon" onClick={handleScrollToTop} aria-label="Scroll to top" className="bg-background/80 backdrop-blur-sm hover:bg-primary/20 h-11 w-11 rounded-full animate-in fade-in"><ArrowUp className="h-5 w-5" /></Button>)}
@@ -213,4 +195,4 @@ const CodeCommission = () => { // ĐỔI TÊN COMPONENT
   );
 };
 
-export default CodeCommission; // ĐỔI TÊN EXPORT
+export default CodeCommission;
