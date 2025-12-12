@@ -32,7 +32,7 @@ export const commissionContent = {
           points: [
             "**Preparation:** Prepare all relevant documents and references for your order.",
             "**Submission:** Fill out and submit the official Commission Form. Ensure any shared links (Google Drive, etc.) are set to 'Anyone with the link can view'.",
-            "**Confirmation & Quote:** You will receive a confirmation email with a price quote from the Studio within 3 days.",
+            "**Confirmation & Quote:** You will receive a confirmation email with a price quote from us within 3 days.",
             "**Deposit:** A deposit is required within 2 days to secure your slot. **Standard:** 50% of the total value. **New VTubers (<6 months):** 20% of the total value.",
             "**Priority Service:** Rush orders are available for an additional fee (e.g., 1.5x for 21 days, 2.0x for 14 days).",
             "**Communication Setup:** Once the deposit is confirmed, we will create a dedicated Google Chat Space for all project communications.",
@@ -43,7 +43,7 @@ export const commissionContent = {
           points: [
             "**Communication:** All project-related discussions must take place exclusively within the Google Chat Space.",
             "**Updates:** You will receive two major progress updates: the first at 50% completion (within 30% of the total timeframe) and the second at 100% completion (within 80% of the timeframe).",
-            "**Feedback:** Prompt feedback is crucial. If there is no response from the client within 3 days, the Studio reserves the right to terminate the project.",
+            "**Feedback:** Prompt feedback is crucial. If there is no response from the client within 3 days, we reserve the right to terminate the project.",
             "**Revisions:** You receive 3 free minor revisions after the final draft is delivered. Major changes may incur additional fees.",
             "**Confidentiality (NDA):** You can request a Non-Disclosure Agreement (NDA) for an additional fee of 10% of the total order value.",
           ],
@@ -52,10 +52,10 @@ export const commissionContent = {
           title: "Phase 3: After Completion",
           points: [
             "**Final Payment:** Once you approve the final product, the remaining balance must be paid.",
-            "**Delivery:** The Studio will deliver all final files via a Google Drive link after the final payment is confirmed.",
+            "**Delivery:** We will deliver all final files via a Google Drive link after the final payment is confirmed.",
             "**Warranty & Storage:** The product includes a 30-day warranty. All files will be stored on our Google Drive for 20 days. Please download your files before this period ends.",
             "**Credit:** You must provide proper credit to the creator in the description when using the product on social media, streams, etc.",
-            "**Studio's Rights:** The Studio reserves the right to use the final product for promotional purposes (portfolio, social media) unless an NDA is in place.",
+            "**Our Rights:** We reserve the right to use the final product for promotional purposes (portfolio, social media) unless an NDA is in place.",
           ],
         },
       ],
@@ -156,16 +156,16 @@ export const commissionContent = {
         {
           title: "A. Regulations",
           points: [
-            "Under no circumstances is the client permitted to use any part of the product delivered by the Studio for NFT purposes or as a resource/reference for creating products using AI software and generators.",
-            "The Studio does not permit the use of any part of the product for pornographic, political, religious, hostile, or discriminatory purposes. We reserve the right to refuse service if the client's intentions involve such content.",
+            "Under no circumstances is the client permitted to use any part of the product delivered by us for NFT purposes or as a resource/reference for creating products using AI software and generators.",
+            "We do not permit the use of any part of the product for pornographic, political, religious, hostile, or discriminatory purposes. We reserve the right to refuse service if the client's intentions involve such content.",
           ],
         },
         {
           title: "B. Delivery and Usage",
           points: [
             "The complete product will be delivered to the client upon completion. Delivery will include the original quality audio file (WAV), a compressed audio file (MP3), and the project file (FLP) if requested.",
-            "After delivery, the product may not be altered by the client or a third party without written consent from the Studio. The client may not transfer or resell the product.",
-            "The intellectual property of the delivered product remains with the Studio. The Studio reserves the right to use these products for promotional purposes.",
+            "After delivery, the product may not be altered by the client or a third party without our written consent. The client may not transfer or resell the product.",
+            "The intellectual property of the delivered product remains with us. We reserve the right to use these products for promotional purposes.",
             "After delivery, the client may use the products according to the following Commercial Licenses:",
             "**Basic Commercial License (Free):**\n- The client may use the delivered product for posting on social media platforms.\n- Use the product for livestreams or in non-profit videos.\n- When using the product, the client must credit the creator.",
             "**Commercial License 2 (+100% of product value):** Includes all rights from the Basic Commercial License, plus the following:\n- Broadcasting at for-profit events.\n- Production of digital goods: Patreon, Memberships, or any digital exchange platform.\n- Distribution on music streaming platforms (Spotify, Apple Music, etc.).\n- Production of physical goods: CDs, Vinyl, etc.",
@@ -174,18 +174,17 @@ export const commissionContent = {
         {
           title: "C. Confidentiality",
           points: [
-            "The Studio confirms and commits that all information provided by the client will be treated as confidential and will not be disclosed publicly. All parties are obligated to keep this information private and use it only for archival purposes.",
-            "The Studio reserves the right to share project progress on social media platforms or livestreams unless the client requests a Non-Disclosure Agreement (NDA).",
+            "We confirm and commit that all information provided by the client will be treated as confidential and will not be disclosed publicly. All parties are obligated to keep this information private and use it only for archival purposes.",
+            "We reserve the right to share project progress on social media platforms or livestreams unless the client requests a Non-Disclosure Agreement (NDA).",
           ],
         },
         {
-          "title": "D. Termination and Refund",
-          "points": [
-            "Both the Studio and the client may terminate the agreement at any time by providing written notice to the other party.",
-            "Upon termination, payment and product delivery will be handled as follows:\n- After the Studio has begun working on the project: The Studio will not refund the deposit and will send the product according to its current progress.\n- At the second update: The client must pay the remaining balance to the Studio, and the Studio will deliver the product according to its current progress with no further support."
-          ]
-        }
-
+          title: "D. Termination and Refund",
+          points: [
+            "Both we and the client may terminate the agreement at any time by providing written notice to the other party.",
+            "Upon termination, payment and product delivery will be handled as follows:\n- After we have begun working on the project: We will not refund the deposit and will send the product according to its current progress.\n- At the second update: The client must pay the remaining balance to us, and we will deliver the product according to its current progress with no further support.",
+          ],
+        },
       ],
     },
     faq: [
@@ -203,11 +202,11 @@ export const commissionContent = {
       },
       {
         q: "Can I edit the music after delivery?",
-        a: "No. You may not modify, alter, remix, or redistribute the product without written consent from the Studio. If you need adjustments, please contact us directly.",
+        a: "No. You may not modify, alter, remix, or redistribute the product without our written consent. If you need adjustments, please contact us directly.",
       },
       {
         q: "Who owns the rights to the music?",
-        a: "The Studio retains full intellectual property rights. You are purchasing a license to use the music under the agreed Terms of Service. The Studio may showcase the work for promotional purposes unless an NDA is requested.",
+        a: "We retain full intellectual property rights. You are purchasing a license to use the music under the agreed Terms of Service. We may showcase the work for promotional purposes unless an NDA is requested.",
       },
       {
         q: "What is your refund policy?",
@@ -215,13 +214,13 @@ export const commissionContent = {
       },
       {
         q: "Can I use the demo version if the commission is canceled?",
-        a: "No. All demos, previews, and draft versions remain the property of the Studio and cannot be used, posted, reproduced, or distributed under any circumstances.",
+        a: "No. All demos, previews, and draft versions remain our property and cannot be used, posted, reproduced, or distributed under any circumstances.",
       },
       {
         q: "Will my project be kept confidential?",
-        a: "Your personal information is always kept confidential. The Studio may share progress or previews unless you request a Non-Disclosure Agreement (NDA) before work begins.",
+        a: "Your personal information is always kept confidential. We may share progress or previews unless you request a Non-Disclosure Agreement (NDA) before work begins.",
       },
-    ]
+    ],
   },
   vi: {
     pageTitle: { main: "NHẬN", highlight: "ĐẶT NHẠC" },
