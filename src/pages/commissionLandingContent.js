@@ -39,7 +39,7 @@ export const commissionLandingContent = {
       {
         Icon: Music2,
         title: { main: "Nhạc & SFX", highlight: "Commission" },
-        description: "Nhạc nền gốc, hiệu ứng âm thanh và các bản nhạc được tùy chỉnh riêng cho nội dung của bạn.",
+        description: "Nhạc nền gốc, hiệu ứng âm thanh và các bản nhạc được tùy chỉnh riêng cho nội dung của bạn. ",
         ctaText: "Xem chi tiết",
         linkTo: "/music-commission",
       },
