@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Chỉ giữ lại phần Copyright */}
         <div className="text-center text-sm text-muted-foreground"> {/* Bỏ border-top và padding-top nếu không cần đường kẻ ngang */}
-          <p>© {currentYear} Tabby Neko. All rights reserved. :3</p>
+          <p>© {currentYear} Tabby Neko. All rights reserved :3</p>
         </div>
       </div>
     </footer>
