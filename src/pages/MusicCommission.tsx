@@ -30,15 +30,15 @@ import {
 // Import content
 import { commissionContent } from "./musicCommissionContent";
 import { useLanguage } from '@/contexts/LanguageContext';
-import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
+
 
 // --- Dữ liệu Video Samples ---
 const youtubeSamples = [
   { id: "wX4oM-xTsow", title: "Sample Tier 1", tier: 3 },
   { id: "gWgt41yh7Cc", title: "Sample Tier 1", tier: 3 },
-  
+
   { id: "epMaVX7sI_w", title: "Sample Tier 2", tier: 3 },
-  
+
   { id: "oVqHbMbbURM", title: "Sample Tier 3", tier: 3 },
 ];
 
@@ -138,7 +138,7 @@ const MusicCommission = () => {
 
   return (
     <>
-      <NationalityWelcomeModal />
+
       <div className="min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
           {/* Page Title */}
@@ -289,33 +289,32 @@ const MusicCommission = () => {
             <h2 className="text-3xl font-gaming mb-12 text-center">
               {content.sections.samples}
             </h2>
-            
+
             <div className="space-y-16 max-w-7xl mx-auto">
               {[1, 2, 3].map((tierNum) => {
                 const styles = getTierStyles(tierNum);
                 const isExpanded = expandedTiers[tierNum];
-                
+
                 // Lọc video theo Tier
                 const tierVideos = youtubeSamples.filter(v => v.tier === tierNum);
                 // Kiểm tra xem có video không
                 const hasVideos = tierVideos.length > 0;
-                
+
                 // Lấy data soundcloud theo Tier
                 const soundcloudInfo = soundcloudData[tierNum];
 
                 return (
                   <div key={tierNum} className={`glass-card p-6 rounded-xl border-t-4 ${styles.border} shadow-lg`}>
                     <div className="flex items-center gap-3 mb-6">
-                       <span className={`text-2xl font-gaming ${styles.text}`}>Tier {tierNum} Collection</span>
-                       <div className="h-px flex-grow bg-border"></div>
+                      <span className={`text-2xl font-gaming ${styles.text}`}>Tier {tierNum} Collection</span>
+                      <div className="h-px flex-grow bg-border"></div>
                     </div>
 
-                    <div className={`relative transition-all duration-700 ease-in-out ${
-                        !hasVideos 
-                            ? 'h-auto' 
-                            : (isExpanded ? 'max-h-[3000px]' : 'max-h-[450px] overflow-hidden')
-                    }`}>
-                      
+                    <div className={`relative transition-all duration-700 ease-in-out ${!hasVideos
+                        ? 'h-auto'
+                        : (isExpanded ? 'max-h-[3000px]' : 'max-h-[450px] overflow-hidden')
+                      }`}>
+
                       {hasVideos && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                           {tierVideos.map((video) => (
@@ -341,33 +340,33 @@ const MusicCommission = () => {
 
                       <div className="w-full rounded-lg overflow-hidden bg-black/5">
                         <iframe
-                            width="100%"
-                            height="450"
-                            scrolling="no"
-                            frameBorder="no"
-                            allow="autoplay"
-                            src={soundcloudInfo.src}
+                          width="100%"
+                          height="450"
+                          scrolling="no"
+                          frameBorder="no"
+                          allow="autoplay"
+                          src={soundcloudInfo.src}
                         ></iframe>
                         <div className="px-2 py-1 bg-[#f2f2f2] dark:bg-[#1a1a1a] flex gap-1 text-[10px] text-[#cccccc] font-sans truncate border-t border-border/10">
-                            <a 
-                              href="https://soundcloud.com/tabbyneko" 
-                              title="Tabby Neko"
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
-                            >
-                              Tabby Neko
-                            </a>
-                            <span className="text-[#333] dark:text-[#cccccc]">·</span>
-                            <a 
-                              href={soundcloudInfo.link} 
-                              title={soundcloudInfo.title}
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
-                            >
-                              {soundcloudInfo.title}
-                            </a>
+                          <a
+                            href="https://soundcloud.com/tabbyneko"
+                            title="Tabby Neko"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
+                          >
+                            Tabby Neko
+                          </a>
+                          <span className="text-[#333] dark:text-[#cccccc]">·</span>
+                          <a
+                            href={soundcloudInfo.link}
+                            title={soundcloudInfo.title}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#333] dark:text-[#cccccc] hover:text-primary transition-colors no-underline"
+                          >
+                            {soundcloudInfo.title}
+                          </a>
                         </div>
                       </div>
 
@@ -378,19 +377,19 @@ const MusicCommission = () => {
                     </div>
 
                     {hasVideos && (
-                        <div className="flex justify-center mt-6 relative z-30">
-                            <Button 
-                                variant="outline" 
-                                onClick={() => toggleTier(tierNum)}
-                                className="gap-2 min-w-[140px] shadow-sm hover:border-primary hover:text-primary transition-all"
-                            >
-                                {isExpanded ? (
-                                    <>Show Less <ChevronUp className="w-4 h-4" /></>
-                                ) : (
-                                    <>Show More <ChevronDown className="w-4 h-4" /></>
-                                )}
-                            </Button>
-                        </div>
+                      <div className="flex justify-center mt-6 relative z-30">
+                        <Button
+                          variant="outline"
+                          onClick={() => toggleTier(tierNum)}
+                          className="gap-2 min-w-[140px] shadow-sm hover:border-primary hover:text-primary transition-all"
+                        >
+                          {isExpanded ? (
+                            <>Show Less <ChevronUp className="w-4 h-4" /></>
+                          ) : (
+                            <>Show More <ChevronDown className="w-4 h-4" /></>
+                          )}
+                        </Button>
+                      </div>
                     )}
                   </div>
                 );
@@ -453,49 +452,49 @@ const MusicCommission = () => {
             <h2 className="text-3xl font-gaming mb-8 text-center">
               {content.sections.tos}
             </h2>
-            
+
             {/* Kiểm tra ngôn ngữ */}
             {language === 'vi' ? (
-                // Nếu là Tiếng Việt: Giữ nguyên Iframe Google Docs
-                <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
-                  <iframe
-                    src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
-                    title="Terms of Service"
-                    className="w-full h-[75vh] border-none rounded-lg bg-white"
-                  >
-                    Loading Terms of Service...
-                  </iframe>
-                </div>
+              // Nếu là Tiếng Việt: Giữ nguyên Iframe Google Docs
+              <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
+                <iframe
+                  src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
+                  title="Terms of Service"
+                  className="w-full h-[75vh] border-none rounded-lg bg-white"
+                >
+                  Loading Terms of Service...
+                </iframe>
+              </div>
             ) : (
-                // Nếu là Tiếng Anh (hoặc khác): Hiển thị nội dung Text
-                <div className="max-w-4xl mx-auto">
-                  <div className="glass-card p-8 rounded-lg shadow-lg">
-                    {content.tos?.intro && (
-                        <p className="text-center italic text-muted-foreground mb-8">
-                        {parseBoldText(content.tos.intro)}
-                        </p>
-                    )}
-                    <div className="space-y-10">
-                      {content.tos?.sections?.map((section, idx) => (
-                        <div key={idx}>
-                          <h3 className="text-2xl font-gaming text-primary mb-4 border-b border-primary/20 pb-2">
-                            {section.title}
-                          </h3>
-                          <ul className="space-y-4">
-                            {section.points.map((point, pIdx) => (
-                              <li key={pIdx} className="flex items-start gap-3 text-muted-foreground">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] flex-shrink-0"></div>
-                                <div className="text-base leading-relaxed">
-                                    {parseBoldText(point)}
-                                </div>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
+              // Nếu là Tiếng Anh (hoặc khác): Hiển thị nội dung Text
+              <div className="max-w-4xl mx-auto">
+                <div className="glass-card p-8 rounded-lg shadow-lg">
+                  {content.tos?.intro && (
+                    <p className="text-center italic text-muted-foreground mb-8">
+                      {parseBoldText(content.tos.intro)}
+                    </p>
+                  )}
+                  <div className="space-y-10">
+                    {content.tos?.sections?.map((section, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-2xl font-gaming text-primary mb-4 border-b border-primary/20 pb-2">
+                          {section.title}
+                        </h3>
+                        <ul className="space-y-4">
+                          {section.points.map((point, pIdx) => (
+                            <li key={pIdx} className="flex items-start gap-3 text-muted-foreground">
+                              <div className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] flex-shrink-0"></div>
+                              <div className="text-base leading-relaxed">
+                                {parseBoldText(point)}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                 </div>
+              </div>
             )}
           </div>
 

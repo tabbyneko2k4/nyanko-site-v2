@@ -13,7 +13,7 @@ import { codeCommissionContent } from "./codeCommissionContent";
 // Import custom hook
 import { useAutoLanguage } from '@/hooks/useAutoLanguage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import NationalityWelcomeModal from '@/components/NationalityWelcomeModal';
+
 
 const CodeCommission = () => {
   const { language } = useLanguage();
@@ -42,7 +42,7 @@ const CodeCommission = () => {
 
   return (
     <>
-      <NationalityWelcomeModal />
+
       <div className="min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-secondary/20 animate-page-enter">
         <div className="container mx-auto px-4 py-12">
 

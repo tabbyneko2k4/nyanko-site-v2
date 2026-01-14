@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NationalityWelcomeModal from "@/components/NationalityWelcomeModal";
 import Index from "@/pages/Index";
 import Music from "@/pages/Music";
 import Programming from "@/pages/Programming";
@@ -41,6 +42,7 @@ const App = () => (
               </Routes>
             </main>
             <Footer />
+            <NationalityWelcomeModal />
           </div>
         </BrowserRouter>
       </TooltipProvider>

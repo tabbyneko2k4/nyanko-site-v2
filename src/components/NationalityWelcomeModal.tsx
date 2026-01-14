@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocation } from 'react-router-dom';
 import {
   Dialog,
   DialogContent,
@@ -11,25 +12,34 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+const ALLOWED_PATHS = ['/commission', '/code-commission', '/music-commission'];
+
 const NationalityWelcomeModal = () => {
   const { setLanguage } = useLanguage();
+  const location = useLocation();
   const [showNationModal, setShowNationModal] = useState(false);
   const [doNotShowAgain, setDoNotShowAgain] = useState(false);
+  const [hasShownSession, setHasShownSession] = useState(false);
 
   useEffect(() => {
     // 1. Kiểm tra xem user đã chọn "Không hiện lại" chưa
-    const shouldHide = localStorage.getItem('hideWelcomeModal') === 'true';
+    const shouldHideForever = localStorage.getItem('hideWelcomeModal') === 'true';
 
-    // 2. Nếu chưa chọn ẩn, thì luôn hiện Modal lên (mặc định)
-    if (!shouldHide) {
+    // 2. Kiểm tra xem có phải trang được phép hiện không
+    const isAllowedPath = ALLOWED_PATHS.includes(location.pathname);
+
+    // 3. Nếu chưa ẩn vĩnh viễn, chưa hiện trong phiên này, và đúng trang -> Hiện
+    if (!shouldHideForever && !hasShownSession && isAllowedPath) {
       setShowNationModal(true);
     }
-  }, []);
+  }, [location.pathname]); // Chạy lại khi đổi trang
 
   const handleClose = () => {
     if (doNotShowAgain) {
       localStorage.setItem('hideWelcomeModal', 'true');
     }
+    // Đánh dấu đã hiện trong phiên này rồi -> không hiện lại nữa cho đến khi F5
+    setHasShownSession(true);
     setShowNationModal(false);
   };
 
