@@ -12,7 +12,7 @@ import NationalityWelcomeModal from "@/components/NationalityWelcomeModal";
 import Index from "@/pages/Index";
 import Music from "@/pages/Music";
 import Programming from "@/pages/Programming";
-import CodeCommission from "@/pages/CodeCommission";
+
 import MusicCommission from "@/pages/MusicCommission";
 import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
@@ -35,7 +35,7 @@ const App = () => (
                 <Route path="/music" element={<Music />} />
                 <Route path="/program" element={<Programming />} />
                 <Route path="/music-commission" element={<MusicCommission />} />
-                <Route path="/code-commission" element={<CodeCommission />} />
+
                 <Route path="/commission" element={<CommissionLandingPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />

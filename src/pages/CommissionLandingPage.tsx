@@ -39,12 +39,12 @@ const CommissionLandingPage = () => {
           </p>
 
           {/* Commission Category Cards */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="max-w-5xl mx-auto flex justify-center">
             {content.cards.map((card, index) => (
               <Link
                 to={card.linkTo}
                 key={index}
-                className="group block glass-card p-8 rounded-xl shadow-lg hover:shadow-primary/20 hover:scale-105 transition-all duration-300"
+                className="group block glass-card p-8 rounded-xl shadow-lg hover:shadow-primary/20 hover:scale-105 transition-all duration-300 w-full max-w-lg"
               >
                 <div className="flex flex-col h-full text-center">
                   <div className="mb-6">

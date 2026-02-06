@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
-const ALLOWED_PATHS = ['/commission', '/code-commission', '/music-commission'];
+const ALLOWED_PATHS = ['/commission', '/music-commission'];
 
 const NationalityWelcomeModal = () => {
   const { setLanguage } = useLanguage();

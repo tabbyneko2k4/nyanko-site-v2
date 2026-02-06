@@ -15,7 +15,7 @@ const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const location = useLocation();
 
-  const commissionPages = ['/commission', '/code-commission', '/music-commission'];
+  const commissionPages = ['/commission', '/music-commission'];
   const showLanguageSwitcher = commissionPages.includes(location.pathname);
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"}`}>
       <div className="container relative mx-auto px-4 py-4 flex items-center justify-between">
-        
+
         {/* Logo (Left Side) */}
         <div className="flex-shrink-0 z-10">
           <Link to="/" onClick={closeMobileMenu} aria-label="Go to Homepage">
