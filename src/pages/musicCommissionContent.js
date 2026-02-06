@@ -376,7 +376,42 @@ export const commissionContent = {
       note: "Giá trên là ước tính và có thể thay đổi tùy độ phức tạp. Liên hệ để có báo giá cụ thể.",
     },
     tos: {
-
+      intro:
+        "*Vui lòng đảm bảo rằng bạn đã chấp nhận các điều khoản này trước khi đặt hàng.*",
+      sections: [
+        {
+          title: "A. Quy định",
+          points: [
+            "Trong bất kỳ trường hợp nào, khách hàng không được phép sử dụng bất kỳ phần nào của sản phẩm do chúng tôi cung cấp cho mục đích NFT hoặc làm tài nguyên/tham chiếu để tạo sản phẩm bằng phần mềm AI và các công cụ tạo sinh.",
+            "Chúng tôi không cho phép sử dụng bất kỳ phần nào của sản phẩm cho các mục đích khiêu dâm, chính trị, tôn giáo, thù địch hoặc phân biệt đối xử. Chúng tôi có quyền từ chối phục vụ nếu ý định của khách hàng liên quan đến những nội dung như vậy.",
+          ],
+        },
+        {
+          title: "B. Bàn giao và Sử dụng",
+          points: [
+            "Sản phẩm hoàn chỉnh sẽ được bàn giao cho khách hàng sau khi hoàn tất. Bàn giao sẽ bao gồm file âm thanh chất lượng gốc (WAV), file âm thanh nén (MP3), và file dự án (FLP) nếu có yêu cầu.",
+            "Sau khi bàn giao, sản phẩm không được phép thay đổi bởi khách hàng hoặc bên thứ ba mà không có sự đồng ý bằng văn bản của chúng tôi. Khách hàng không được chuyển nhượng hoặc bán lại sản phẩm.",
+            "Quyền sở hữu trí tuệ của sản phẩm được bàn giao vẫn thuộc về chúng tôi. Chúng tôi có quyền sử dụng các sản phẩm này cho mục đích quảng bá.",
+            "Sau khi bàn giao, khách hàng có thể sử dụng sản phẩm theo các Giấy phép Thương mại sau:",
+            "**Giấy phép Thương mại Cơ bản (Miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm đã giao để đăng tải trên các nền tảng mạng xã hội.\n- Sử dụng sản phẩm cho livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải ghi rõ tên người tạo (credit).",
+            "**Giấy phép Thương mại 2 (+100% giá trị sản phẩm):** Bao gồm tất cả các quyền từ Giấy phép Thương mại Cơ bản, cộng thêm các quyền sau:\n- Phát sóng tại các sự kiện có lợi nhuận.\n- Sản xuất hàng hóa kỹ thuật số: Patreon, Memberships, hoặc bất kỳ nền tảng trao đổi kỹ thuật số nào.\n- Phân phối trên các nền tảng phát nhạc trực tuyến (Spotify, Apple Music, v.v.).\n- Sản xuất hàng hóa vật lý: CD, Vinyl, v.v.",
+          ],
+        },
+        {
+          title: "C. Bảo mật",
+          points: [
+            "Chúng tôi xác nhận và cam kết rằng mọi thông tin do khách hàng cung cấp sẽ được bảo mật và không được tiết lộ công khai. Tất cả các bên có nghĩa vụ giữ bí mật thông tin này và chỉ sử dụng cho mục đích lưu trữ.",
+            "Chúng tôi có quyền chia sẻ tiến độ dự án trên các nền tảng mạng xã hội hoặc livestream trừ khi khách hàng yêu cầu Thỏa thuận bảo mật (NDA).",
+          ],
+        },
+        {
+          title: "D. Chấm dứt và Hoàn tiền",
+          points: [
+            "Cả chúng tôi và khách hàng đều có thể chấm dứt thỏa thuận bất cứ lúc nào bằng cách thông báo bằng văn bản cho bên kia.",
+            "Khi chấm dứt, việc thanh toán và bàn giao sản phẩm sẽ được xử lý như sau:\n- Sau khi chúng tôi đã bắt đầu thực hiện dự án: Chúng tôi sẽ không hoàn lại tiền cọc và sẽ gửi sản phẩm theo tiến độ hiện tại.\n- Tại lần cập nhật thứ hai: Khách hàng phải thanh toán số dư còn lại cho chúng tôi, và chúng tôi sẽ bàn giao sản phẩm theo tiến độ hiện tại mà không hỗ trợ thêm.",
+          ],
+        },
+      ],
     },
     faq: [
       {

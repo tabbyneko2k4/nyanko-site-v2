@@ -311,8 +311,8 @@ const MusicCommission = () => {
                     </div>
 
                     <div className={`relative transition-all duration-700 ease-in-out ${!hasVideos
-                        ? 'h-auto'
-                        : (isExpanded ? 'max-h-[3000px]' : 'max-h-[450px] overflow-hidden')
+                      ? 'h-auto'
+                      : (isExpanded ? 'max-h-[3000px]' : 'max-h-[450px] overflow-hidden')
                       }`}>
 
                       {hasVideos && (
@@ -453,49 +453,34 @@ const MusicCommission = () => {
               {content.sections.tos}
             </h2>
 
-            {/* Kiểm tra ngôn ngữ */}
-            {language === 'vi' ? (
-              // Nếu là Tiếng Việt: Giữ nguyên Iframe Google Docs
-              <div className="glass-card p-2 md:p-3 shadow-lg max-w-4xl mx-auto rounded-xl overflow-hidden">
-                <iframe
-                  src="https://docs.google.com/document/d/e/2PACX-1vTp_ROAtqo2CbG3tDF4DPut_Mo3waiIqGsTnPGbTj00yVShqLXHEj916idII2t7wty8RqK_6pH9zbvY/pub?embedded=true"
-                  title="Terms of Service"
-                  className="w-full h-[75vh] border-none rounded-lg bg-white"
-                >
-                  Loading Terms of Service...
-                </iframe>
-              </div>
-            ) : (
-              // Nếu là Tiếng Anh (hoặc khác): Hiển thị nội dung Text
-              <div className="max-w-4xl mx-auto">
-                <div className="glass-card p-8 rounded-lg shadow-lg">
-                  {content.tos?.intro && (
-                    <p className="text-center italic text-muted-foreground mb-8">
-                      {parseBoldText(content.tos.intro)}
-                    </p>
-                  )}
-                  <div className="space-y-10">
-                    {content.tos?.sections?.map((section, idx) => (
-                      <div key={idx}>
-                        <h3 className="text-2xl font-gaming text-primary mb-4 border-b border-primary/20 pb-2">
-                          {section.title}
-                        </h3>
-                        <ul className="space-y-4">
-                          {section.points.map((point, pIdx) => (
-                            <li key={pIdx} className="flex items-start gap-3 text-muted-foreground">
-                              <div className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] flex-shrink-0"></div>
-                              <div className="text-base leading-relaxed">
-                                {parseBoldText(point)}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="glass-card p-8 rounded-lg shadow-lg">
+                {content.tos?.intro && (
+                  <p className="text-center italic text-muted-foreground mb-8">
+                    {parseBoldText(content.tos.intro)}
+                  </p>
+                )}
+                <div className="space-y-10">
+                  {content.tos?.sections?.map((section, idx) => (
+                    <div key={idx}>
+                      <h3 className="text-2xl font-gaming text-primary mb-4 border-b border-primary/20 pb-2">
+                        {section.title}
+                      </h3>
+                      <ul className="space-y-4">
+                        {section.points.map((point, pIdx) => (
+                          <li key={pIdx} className="flex items-start gap-3 text-muted-foreground">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-[0.5rem] flex-shrink-0"></div>
+                            <div className="text-base leading-relaxed">
+                              {parseBoldText(point)}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
-            )}
+            </div>
           </div>
 
           {/* --- FAQ Section --- */}
