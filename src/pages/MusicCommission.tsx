@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 // Import icons
-import { FaTrello } from "react-icons/fa";
+import { FaTrello, FaFacebook, FaDiscord, FaPhone } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
 import { ArrowUp, ChevronDown, ChevronUp } from "lucide-react";
 // Import các component UI cần thiết
@@ -406,20 +406,57 @@ const MusicCommission = () => {
               <p className="text-center text-muted-foreground mb-8">
                 {content.workflow.intro}
               </p>
-              <div className="text-center mb-12">
-                <a
-                  href={content.workflow.formButton.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+
+              <div className="flex flex-col items-center gap-6 mb-12">
+                <h3 className="text-xl font-gaming text-center">
+                  {content.workflow.contact.title}
+                </h3>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {/* Facebook */}
+                  <a
+                    href={content.workflow.contact.facebook.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="lg"
+                      className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white gap-2 shadow-lg hover:scale-105 transition-transform duration-300"
+                    >
+                      <FaFacebook className="w-5 h-5" />
+                      {content.workflow.contact.facebook.text}
+                    </Button>
+                  </a>
+
+                  {/* Discord */}
                   <Button
                     size="lg"
-                    className="shadow-lg hover:scale-105 transition-transform duration-300"
+                    className="bg-[#5865F2] hover:bg-[#5865F2]/90 text-white gap-2 shadow-lg hover:scale-105 transition-transform duration-300"
+                    onClick={() => {
+                      navigator.clipboard.writeText(content.workflow.contact.discord.copyValue);
+                      alert("Copied Discord username: " + content.workflow.contact.discord.copyValue);
+                    }}
                   >
-                    {content.workflow.formButton.text}
+                    <FaDiscord className="w-5 h-5" />
+                    {content.workflow.contact.discord.text}
                   </Button>
-                </a>
+
+                  {/* Zalo */}
+                  <a
+                    href={content.workflow.contact.zalo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="lg"
+                      className="bg-[#0068FF] hover:bg-[#0068FF]/90 text-white gap-2 shadow-lg hover:scale-105 transition-transform duration-300"
+                    >
+                      <FaPhone className="w-4 h-4" />
+                      {content.workflow.contact.zalo.text}
+                    </Button>
+                  </a>
+                </div>
               </div>
+
 
               <div className="relative pl-8 border-l-2 border-primary/20">
                 {content.workflow.stages.map((stage, index) => (

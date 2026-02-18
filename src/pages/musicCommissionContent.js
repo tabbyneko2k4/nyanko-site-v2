@@ -22,28 +22,37 @@ export const commissionContent = {
       title: "How It Works",
       intro:
         "This is our standard workflow to ensure transparency and efficiency for both parties. Please review the steps before submitting your request.",
-      formButton: {
-        text: "Fill Out Commission Form",
-        url: "https://forms.gle/bsrJuRqvSrMCZhtu8",
+      contact: {
+        title: "Contact Me",
+        facebook: {
+          text: "Facebook",
+          url: "https://www.facebook.com/nyanko2k4/",
+        },
+        discord: {
+          text: "Discord: tabbyneko",
+          copyValue: "tabbyneko",
+        },
+        zalo: {
+          text: "Zalo: 0766933787",
+          url: "https://zalo.me/84766933787",
+        },
       },
       stages: [
         {
           title: "Phase 1: Before We Start",
           points: [
-            "**Preparation:** Prepare all relevant documents and references for your order.",
-            "**Submission:** Fill out and submit the official Commission Form. Ensure any shared links (Google Drive, etc.) are set to 'Anyone with the link can view'.",
-            "**Confirmation & Quote:** You will receive a confirmation email with a price quote from us within 3 days.",
-            "**Deposit:** A deposit is required within 2 days to secure your slot. **Standard:** 50% of the total value. **New VTubers (<6 months):** 20% of the total value.",
-            "**Priority Service:** Rush orders are available for an additional fee (e.g., 1.5x for 21 days, 2.0x for 14 days).",
-            "**Communication Setup:** Once the deposit is confirmed, we will create a dedicated Google Chat Space for all project communications.",
+            "**Consultation:** We will consult with you based on your requests. From there, we will have the necessary information to start the project.",
+            "**Confirmation & Quote:** You will receive a quote corresponding to your requests.",
+            "**Deposit:** A 10% deposit of the total order value is required to secure your slot.",
+            "**Priority Service:** Rush orders are available for an additional fee (e.g., x2 for orders under 7 days, x3.0 for 3-day orders).",
+            "**Communication Setup:** Once the deposit is confirmed, we will start the project.",
           ],
         },
         {
           title: "Phase 2: During The Project",
           points: [
-            "**Communication:** All project-related discussions must take place exclusively within the Google Chat Space.",
-            "**Updates:** You will receive two major progress updates: the first at 50% completion (within 30% of the total timeframe) and the second at 100% completion (within 80% of the timeframe).",
-            "**Feedback:** Prompt feedback is crucial. If there is no response from the client within 3 days, we reserve the right to terminate the project.",
+            "**Communication:** All project-related discussions will take place via chat channels.",
+            "**Updates:** You will receive two major progress updates: the first at 50% completion and the second at 100% completion.",
             "**Revisions:** You receive 3 free minor revisions after the final draft is delivered. Major changes may incur additional fees.",
             "**Confidentiality (NDA):** You can request a Non-Disclosure Agreement (NDA) for an additional fee of 10% of the total order value.",
           ],
@@ -167,7 +176,7 @@ export const commissionContent = {
             "After delivery, the product may not be altered by the client or a third party without our written consent. The client may not transfer or resell the product.",
             "The intellectual property of the delivered product remains with us. We reserve the right to use these products for promotional purposes.",
             "After delivery, the client may use the products according to the following Commercial Licenses:",
-            "**Basic Commercial License (Free):**\n- The client may use the delivered product for posting on social media platforms.\n- Use the product for livestreams or in non-profit videos.\n- When using the product, the client must credit the creator.",
+            "**Commercial License 1 (Free):**\n- The client may use the delivered product for posting on social media platforms.\n- Use the product for livestreams or in non-profit videos.\n- When using the product, the client must credit the creator.",
             "**Commercial License 2 (+100% of product value):** Includes all rights from the Basic Commercial License, plus the following:\n- Broadcasting at for-profit events.\n- Production of digital goods: Patreon, Memberships, or any digital exchange platform.\n- Distribution on music streaming platforms (Spotify, Apple Music, etc.).\n- Production of physical goods: CDs, Vinyl, etc.",
           ],
         },
@@ -245,28 +254,37 @@ export const commissionContent = {
       title: "Quy trình làm việc",
       intro:
         "Đây là quy trình làm việc tiêu chuẩn của chúng tôi để đảm bảo sự minh bạch và hiệu quả cho cả hai bên. Vui lòng xem qua các bước trước khi gửi yêu cầu.",
-      formButton: {
-        text: "Điền form đặt hàng",
-        url: "https://forms.gle/bsrJuRqvSrMCZhtu8",
+      contact: {
+        title: "Liên hệ chốt đơn",
+        facebook: {
+          text: "Facebook",
+          url: "https://www.facebook.com/nyanko2k4/",
+        },
+        discord: {
+          text: "Discord: tabbyneko",
+          copyValue: "tabbyneko",
+        },
+        zalo: {
+          text: "Zalo: 0766933787",
+          url: "https://zalo.me/84766933787",
+        },
       },
       stages: [
         {
           title: "Giai đoạn 1: Trước khi bắt đầu dự án",
           points: [
-            "**Chuẩn bị:** Chuẩn bị đầy đủ tài liệu liên quan đến đơn hàng của bạn.",
-            "**Gửi yêu cầu:** Điền và gửi form đặt hàng chính thức. Đảm bảo các liên kết chia sẻ (Google Drive,...) được đặt ở trạng thái 'Bất kỳ ai có đường liên kết' với chế độ 'Người xem'.",
-            "**Xác nhận & báo giá:** Bạn sẽ nhận được email xác nhận và báo giá từ Studio trong vòng 3 ngày.",
-            "**Đặt cọc:** Cần đặt cọc trong vòng 2 ngày để giữ chỗ. **Khách hàng thường:** 50% giá trị đơn hàng. **VTuber mới (<6 tháng):** 20% giá trị đơn hàng.",
-            "**Dịch vụ ưu tiên:** Có thể yêu cầu làm hỏa tốc với phụ phí (ví dụ: x1.5 cho 21 ngày, x2.0 cho 14 ngày).",
-            "**Thiết lập liên lạc:** Sau khi xác nhận cọc, Studio sẽ tạo một Google Chat Space riêng cho dự án để hai bên trao đổi.",
+            "**Tư vấn:** Chúng tôi sẽ tư vấn cho bạn theo yêu cầu của bạn. Từ đó chúng tôi có những thông tin cần thiết để bắt đầu dự án.",
+            "**Xác nhận & báo giá:** Bạn sẽ nhận được báo giá tương ứng với những yêu cầu của bạn.",
+            "**Đặt cọc:** Đặt cọc 10% giá trị đơn hàng để giữ chỗ.",
+            "**Dịch vụ ưu tiên:** Có thể yêu cầu làm hỏa tốc với phụ phí (ví dụ: x2 cho đơn hàng dưới 7 ngày, x3.0 cho những đơn hàng 3 ngày).",
+            "**Thiết lập liên lạc:** Sau khi xác nhận cọc, chúng tôi sẽ bắt đầu dự án.",
           ],
         },
         {
           title: "Giai đoạn 2: Trong quá trình thực hiện dự án",
           points: [
-            "**Giao tiếp:** Mọi thông tin trao đổi liên quan đến dự án sẽ chỉ được thực hiện qua Google Chat Space.",
-            "**Cập nhật:** Bạn sẽ nhận được 2 lần cập nhật tiến độ chính: lần đầu khi đạt 50% công việc (trong 30% tổng thời gian) và lần hai khi hoàn thành 100% (trong 80% tổng thời gian).",
-            "**Phản hồi:** Phản hồi kịp thời là rất quan trọng. Nếu khách hàng không phản hồi trong vòng 3 ngày, Studio có quyền chấm dứt dự án.",
+            "**Giao tiếp:** Mọi thông tin trao đổi liên quan đến dự án sẽ chỉ được thực hiện qua các kênh chat.",
+            "**Cập nhật:** Bạn sẽ nhận được 2 lần cập nhật tiến độ chính: lần đầu khi đạt 50% công việc và lần hai khi hoàn thành 100%.",
             "**Chỉnh sửa:** Bạn sẽ có 3 lần chỉnh sửa nhỏ miễn phí sau khi sản phẩm được bàn giao. Những thay đổi lớn có thể phát sinh thêm chi phí.",
             "**Thỏa thuận bảo mật (NDA):** Bạn có thể yêu cầu ký NDA với mức phí là 10% tổng giá trị đơn hàng.",
           ],
@@ -275,10 +293,10 @@ export const commissionContent = {
           title: "Giai đoạn 3: Sau khi hoàn thành dự án",
           points: [
             "**Thanh toán cuối:** Sau khi bạn đã đồng thuận về sản phẩm cuối cùng, vui lòng thanh toán phần còn lại.",
-            "**Bàn giao:** Studio sẽ tiến hành bàn giao toàn bộ sản phẩm qua link Google Drive sau khi xác nhận thanh toán.",
+            "**Bàn giao:** Chúng tôi sẽ tiến hành bàn giao toàn bộ sản phẩm qua link Google Drive sau khi xác nhận thanh toán.",
             "**Bảo hành & lưu trữ:** Sản phẩm có thời hạn bảo hành 30 ngày. File dự án sẽ được lưu trữ trên Google Drive trong 20 ngày. Vui lòng tải về trước khi hết hạn.",
             "**Ghi danh (credit):** Bạn phải ghi rõ tên người tạo ra sản phẩm (credit) trong phần mô tả khi sử dụng trên các nền tảng mạng xã hội, livestream.",
-            "**Quyền của Studio:** Studio có quyền sử dụng sản phẩm để quảng bá (portfolio, mạng xã hội) trừ khi có NDA.",
+            "**Quyền của chúng tôi:** Chúng tôi có quyền sử dụng sản phẩm để quảng bá (portfolio, mạng xã hội) trừ khi có NDA.",
           ],
         },
       ],
@@ -393,7 +411,7 @@ export const commissionContent = {
             "Sau khi bàn giao, sản phẩm không được phép thay đổi bởi khách hàng hoặc bên thứ ba mà không có sự đồng ý bằng văn bản của chúng tôi. Khách hàng không được chuyển nhượng hoặc bán lại sản phẩm.",
             "Quyền sở hữu trí tuệ của sản phẩm được bàn giao vẫn thuộc về chúng tôi. Chúng tôi có quyền sử dụng các sản phẩm này cho mục đích quảng bá.",
             "Sau khi bàn giao, khách hàng có thể sử dụng sản phẩm theo các Giấy phép Thương mại sau:",
-            "**Giấy phép Thương mại Cơ bản (Miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm đã giao để đăng tải trên các nền tảng mạng xã hội.\n- Sử dụng sản phẩm cho livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải ghi rõ tên người tạo (credit).",
+            "**Giấy phép Thương mại 1 (Miễn phí):**\n- Khách hàng có thể sử dụng sản phẩm đã giao để đăng tải trên các nền tảng mạng xã hội.\n- Sử dụng sản phẩm cho livestream hoặc trong các video phi lợi nhuận.\n- Khi sử dụng sản phẩm, khách hàng phải ghi rõ tên người tạo (credit).",
             "**Giấy phép Thương mại 2 (+100% giá trị sản phẩm):** Bao gồm tất cả các quyền từ Giấy phép Thương mại Cơ bản, cộng thêm các quyền sau:\n- Phát sóng tại các sự kiện có lợi nhuận.\n- Sản xuất hàng hóa kỹ thuật số: Patreon, Memberships, hoặc bất kỳ nền tảng trao đổi kỹ thuật số nào.\n- Phân phối trên các nền tảng phát nhạc trực tuyến (Spotify, Apple Music, v.v.).\n- Sản xuất hàng hóa vật lý: CD, Vinyl, v.v.",
           ],
         },
