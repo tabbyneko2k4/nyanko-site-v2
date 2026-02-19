@@ -191,7 +191,7 @@ export const commissionContent = {
           title: "D. Termination and Refund",
           points: [
             "Both we and the client may terminate the agreement at any time by providing written notice to the other party.",
-            "Upon termination, payment and product delivery will be handled as follows:\n- Before we have begun working on the project: We will refund the deposit.\n- After we have begun working on the project: We will not refund the deposit and will send the product according to its current progress.\n- At the second update: The client must pay the remaining balance to us, and we will deliver the product according to its current progress with no further support.",
+            "Upon termination, payment and product delivery will be handled as follows:\n- If the project progress has not reached 50%: We will refund the deposit.\n- If the project progress has reached 50%: We will not refund the deposit and will send the product according to its current progress.\n- At the second update: The client must pay the remaining balance to us, and we will deliver the product according to its current progress with no further support.",
           ],
         },
       ],
@@ -284,7 +284,7 @@ export const commissionContent = {
           title: "Giai đoạn 2: Trong quá trình thực hiện dự án",
           points: [
             "**Giao tiếp:** Mọi thông tin trao đổi liên quan đến dự án sẽ chỉ được thực hiện qua các kênh chat.",
-            "**Cập nhật:** Bạn sẽ nhận được 2 lần cập nhật tiến độ chính: lần đầu khi đạt 50% công việc và lần hai khi hoàn thành 100%.",
+            "**Cập nhật:** Chúng tôi sẽ cập nhật tiến độ thường xuyên.Bạn sẽ nhận được 2 lần cập nhật tiến độ chính: lần đầu khi đạt 50% công việc và lần hai khi hoàn thành 100%.",
             "**Chỉnh sửa:** Bạn sẽ có 3 lần chỉnh sửa nhỏ miễn phí sau khi sản phẩm được bàn giao. Những thay đổi lớn có thể phát sinh thêm chi phí.",
             "**Thỏa thuận bảo mật (NDA):** Bạn có thể yêu cầu ký NDA với mức phí là 10% tổng giá trị đơn hàng.",
           ],
@@ -426,7 +426,7 @@ export const commissionContent = {
           title: "D. Chấm dứt và Hoàn tiền",
           points: [
             "Cả chúng tôi và khách hàng đều có thể chấm dứt thỏa thuận bất cứ lúc nào bằng cách thông báo bằng văn bản cho bên kia.",
-            "Khi chấm dứt, việc thanh toán và bàn giao sản phẩm sẽ được xử lý như sau:\n- Trước khi chúng tôi bắt đầu thực hiện dự án: Chúng tôi sẽ hoàn lại tiền cọc.\n- Sau khi chúng tôi đã bắt đầu thực hiện dự án: Chúng tôi sẽ không hoàn lại tiền cọc và sẽ gửi sản phẩm theo tiến độ hiện tại.\n- Tại lần cập nhật thứ hai: Khách hàng phải thanh toán số dư còn lại cho chúng tôi, và chúng tôi sẽ bàn giao sản phẩm theo tiến độ hiện tại mà không hỗ trợ thêm.",
+            "Khi chấm dứt, việc thanh toán và bàn giao sản phẩm sẽ được xử lý như sau:\n- Trước khi dự án đạt được 50%: Chúng tôi sẽ hoàn lại tiền cọc.\n- Sau khi dự án đạt được 50%: Chúng tôi sẽ không hoàn lại tiền cọc và sẽ gửi sản phẩm theo tiến độ hiện tại.\n- Tại lần cập nhật thứ hai: Khách hàng phải thanh toán số dư còn lại cho chúng tôi, và chúng tôi sẽ bàn giao sản phẩm theo tiến độ hiện tại mà không hỗ trợ thêm.",
           ],
         },
       ],
