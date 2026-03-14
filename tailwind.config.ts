@@ -96,7 +96,7 @@ export default {
           '50%': { transform: 'translateY(-10px)' }
         },
         'page-enter': {
-          '0%': { 
+          '0%': {
             opacity: '0',
             transform: 'translateY(20px)'
           },
@@ -106,7 +106,7 @@ export default {
           }
         },
         'content-enter': {
-          '0%': { 
+          '0%': {
             opacity: '0',
             transform: 'translateX(-10px)'
           },

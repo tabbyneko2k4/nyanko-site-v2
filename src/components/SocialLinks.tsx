@@ -17,11 +17,11 @@ const SocialLinks = () => {
   ];
 
   const nyankoLinks = [
-     { name: "SoundCloud", icon: FaSoundcloud, href: "https://soundcloud.com/itsnyanko", hoverColorClass: "group-hover:text-[#FF5500]" },
-     { name: "Youtube", icon: FaYoutube, href: "https://www.youtube.com/@nyankoisme", hoverColorClass: "group-hover:text-[#FF0000]" }, // Sửa lại hover color cho Youtube
-     { name: "Spotify", icon: FaSpotify, href: "https://open.spotify.com/artist/55s6uxgHctw4uJl6n7qtRl", hoverColorClass: "group-hover:text-[#1DB954]" }, // Bỏ query string không cần thiết
-     { name: "Apple Music", icon: SiApplemusic, href: "https://music.apple.com/us/artist/nyanko/1611291717", hoverColorClass: "group-hover:text-black dark:group-hover:text-white" },
-     { name: "Facebook", icon: FaFacebook, href: "https://www.facebook.com/itsnyanko", hoverColorClass: "group-hover:text-[#1877F2]" },
+    { name: "SoundCloud", icon: FaSoundcloud, href: "https://soundcloud.com/itsnyanko", hoverColorClass: "group-hover:text-[#FF5500]" },
+    { name: "Youtube", icon: FaYoutube, href: "https://www.youtube.com/@nyankoisme", hoverColorClass: "group-hover:text-[#FF0000]" }, // Sửa lại hover color cho Youtube
+    { name: "Spotify", icon: FaSpotify, href: "https://open.spotify.com/artist/55s6uxgHctw4uJl6n7qtRl", hoverColorClass: "group-hover:text-[#1DB954]" }, // Bỏ query string không cần thiết
+    { name: "Apple Music", icon: SiApplemusic, href: "https://music.apple.com/us/artist/nyanko/1611291717", hoverColorClass: "group-hover:text-black dark:group-hover:text-white" },
+    { name: "Facebook", icon: FaFacebook, href: "https://www.facebook.com/itsnyanko", hoverColorClass: "group-hover:text-[#1877F2]" },
   ];
 
   // --- Render Function (không đổi) ---

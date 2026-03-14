@@ -50,8 +50,8 @@ const Music = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-               {/* Optional: Bạn có thể thêm tiêu đề video hoặc mô tả ngắn ở đây nếu muốn */}
-               {/* <div className="p-4">
+              {/* Optional: Bạn có thể thêm tiêu đề video hoặc mô tả ngắn ở đây nếu muốn */}
+              {/* <div className="p-4">
                  <h3 className="font-medium text-sm truncate">{video.title}</h3>
                </div> */}
             </div>

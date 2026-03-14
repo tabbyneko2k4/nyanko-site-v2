@@ -42,9 +42,8 @@ const Hero = () => {
       >
         {/* Text Content Block */}
         <div
-          className={`max-w-xl transition-all duration-1000 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`max-w-xl transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-gaming mb-4 text-glow">
             TABBY NEKO
@@ -70,19 +69,18 @@ const Hero = () => {
 
         {/* --- Logo Image Block --- */}
         <div
-            className={`hidden md:block transition-all duration-1000 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          className={`hidden md:block transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
-            <img
-                src="/tabbyneko-logo.png"
-                alt="Tabby Neko Stylized Logo"
-                // ---- THAY ĐỔI CHIỀU CAO LOGO Ở ĐÂY ----
-                // Giảm chiều cao để cố gắng khớp với khối text
-                // Thử nghiệm với các giá trị này, ví dụ: 44=11rem, 48=12rem, 52=13rem
-                className="md:h-44 lg:h-52 w-auto object-contain"
-                // Các class cũ: className="h-56 md:h-64 lg:h-72 w-auto object-contain"
-            />
+          <img
+            src="/tabbyneko-logo.png"
+            alt="Tabby Neko Stylized Logo"
+            // ---- THAY ĐỔI CHIỀU CAO LOGO Ở ĐÂY ----
+            // Giảm chiều cao để cố gắng khớp với khối text
+            // Thử nghiệm với các giá trị này, ví dụ: 44=11rem, 48=12rem, 52=13rem
+            className="md:h-44 lg:h-52 w-auto object-contain"
+          // Các class cũ: className="h-56 md:h-64 lg:h-72 w-auto object-contain"
+          />
         </div>
       </div>
     </div>

@@ -255,7 +255,7 @@ export const commissionContent = {
       intro:
         "Đây là quy trình làm việc tiêu chuẩn của chúng tôi để đảm bảo sự minh bạch và hiệu quả cho cả hai bên. Vui lòng xem qua các bước trước khi gửi yêu cầu.",
       contact: {
-        title: "Liên hệ chốt đơn",
+        title: "Liên hệ",
         facebook: {
           text: "Facebook",
           url: "https://www.facebook.com/nyanko2k4/",

@@ -53,10 +53,12 @@
 
     /* ---- THAY ĐỔI Ở ĐÂY ---- */
     /* Màu hồng đậm hơn cho dark mode */
-    --secondary: 350 90% 65%; /* Ví dụ: Giảm Saturation và Lightness */
+    --secondary: 350 90% 65%;
+    /* Ví dụ: Giảm Saturation và Lightness */
     /* Giữ nguyên secondary-foreground (màu chữ trên nền secondary) nếu phù hợp */
     /* Nếu màu hồng mới quá tối, bạn có thể cần đổi foreground sang màu sáng hơn */
-    --secondary-foreground: 210 40% 98%; /* Giữ nguyên màu trắng để tương phản tốt */
+    --secondary-foreground: 210 40% 98%;
+    /* Giữ nguyên màu trắng để tương phản tốt */
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -83,7 +85,12 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-gaming tracking-wider;
   }
 }
@@ -104,11 +111,13 @@
   .glass-card {
     @apply bg-white/10 backdrop-blur-md border border-white/20 dark:bg-black/20 dark:border-white/10;
   }
+
   /* CSS cho Hero Background nếu có */
   .hero-background {
     /* Ảnh mặc định cho mobile */
     background-image: url('/hero-image-mobile.png');
   }
+
   @media (min-width: 768px) {
     .hero-background {
       background-image: url('/hero-image.jpg');

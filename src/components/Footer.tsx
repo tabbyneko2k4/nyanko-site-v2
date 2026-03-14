@@ -11,9 +11,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Xóa toàn bộ div.grid chứa 3 cột cũ */}
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
-          {/* About section - Removed */}
-          {/* Quick links - Removed */}
-          {/* Connect Section - Removed */}
+        {/* About section - Removed */}
+        {/* Quick links - Removed */}
+        {/* Connect Section - Removed */}
         {/* </div> */}
 
         {/* Chỉ giữ lại phần Copyright */}
